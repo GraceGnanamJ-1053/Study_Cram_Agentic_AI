@@ -1,0 +1,4482 @@
+Folder PATH listing for volume DATA
+Volume serial number is FEB5-36A6
+D:.
+|   .gitignore
+|   evaluate_fineweb_test.py
+|   eval_fewshot.py
+|   LICENSE
+|   output.txt
+|   paths.py
+|   pretrain.py
+|   README.md
+|   requirements.txt
+|   
++---acc_configs
+|       default_config.yaml
+|       single_gpu_config.yaml
+|       
++---asset
+|       mor_fig1.png
+|       
++---checkpoints
+|   |   mor_checkpoint.zip
+|   |   
+|   \---mor_checkpoint
+|           config.json
+|           generation_config.json
+|           pytorch_model.bin
+|           special_tokens_map.json
+|           tokenizer.json
+|           tokenizer_config.json
+|           training_args.bin
+|           vocab.json
+|           
++---conf
+|   +---eval_fewshot
+|   |       250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|   |       250720_pretrain_smollm-360m_rec2_middle_cycle_random_lr3e-3.yaml
+|   |       250720_pretrain_smollm-360m_rec2_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|   |       250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3.yaml
+|   |       250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|   |       250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_token_softmax_bal_loss_coeff_0.1_linear_zloss_1e-5.yaml
+|   |       250720_pretrain_smollm-360m_rec4_middle_cycle_random_lr3e-3.yaml
+|   |       250720_pretrain_smollm-360m_rec4_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|   |       250720_pretrain_smollm-360m_vanilla_lr3e-3.yaml
+|   |       250926_pretrain_smollm-360m_rec2_middle_sequence_random_lr3e-3.yaml
+|   |       250926_pretrain_smollm-360m_rec3_middle_sequence_random_lr3e-3.yaml
+|   |       example.yaml
+|   |       
+|   \---pretrain
+|           250720_pretrain_smollm-360m_kv-share_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|           250720_pretrain_smollm-360m_rec2_middle_cycle_random_lr3e-3.yaml
+|           250720_pretrain_smollm-360m_rec2_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|           250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3.yaml
+|           250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|           250720_pretrain_smollm-360m_rec3_middle_cycle_random_lr3e-3_mor_token_softmax_bal_loss_coeff_0.1_linear_zloss_1e-5.yaml
+|           250720_pretrain_smollm-360m_rec4_middle_cycle_random_lr3e-3.yaml
+|           250720_pretrain_smollm-360m_rec4_middle_cycle_random_lr3e-3_mor_expert_linear_alpha_0.1_sigmoid_aux_loss_0.001.yaml
+|           250720_pretrain_smollm-360m_vanilla_lr3e-3.yaml
+|           250926_pretrain_smollm-360m_rec2_middle_sequence_random_lr3e-3.yaml
+|           250926_pretrain_smollm-360m_rec3_middle_sequence_random_lr3e-3.yaml
+|           example.yaml
+|           
++---ds_configs
+|       stage2.config
+|       stage2_cosine_lr_schedule.config
+|       
++---lm_dataset
+|   |   data_preprocessing.py
+|   |   language_modeling_dataset.py
+|   |   load_dataset.py
+|   |   tokenized_dataset.py
+|   |   util.py
+|   |   
+|   \---download_scripts
+|           download_fineweb-edu-dedup.sh
+|           download_fineweb-test.sh
+|           download_langauge_modeling_datasets.sh
+|           
++---lm_eval
+|   |   download_lm_eval_datasets.py
+|   |   evaluator.py
+|   |   evaluator_utils.py
+|   |   LICENSE.md
+|   |   README.md
+|   |   utils.py
+|   |   __init__.py
+|   |   __main__.py
+|   |   
+|   +---api
+|   |       filter.py
+|   |       group.py
+|   |       instance.py
+|   |       metrics.py
+|   |       model.py
+|   |       registry.py
+|   |       samplers.py
+|   |       task.py
+|   |       __init__.py
+|   |       
+|   +---caching
+|   |       cache.py
+|   |       __init__.py
+|   |       
+|   +---decontamination
+|   |       archiver.py
+|   |       decontaminate.py
+|   |       janitor.py
+|   |       __init__.py
+|   |       
+|   +---filters
+|   |       decontamination.py
+|   |       extraction.py
+|   |       selection.py
+|   |       transformation.py
+|   |       __init__.py
+|   |       
+|   +---loggers
+|   |       evaluation_tracker.py
+|   |       utils.py
+|   |       wandb_logger.py
+|   |       __init__.py
+|   |       
+|   +---models
+|   |       anthropic_llms.py
+|   |       api_models.py
+|   |       dummy.py
+|   |       gguf.py
+|   |       hf_vlms.py
+|   |       huggingface.py
+|   |       mamba_lm.py
+|   |       nemo_lm.py
+|   |       neuralmagic.py
+|   |       neuron_optimum.py
+|   |       openai_completions.py
+|   |       optimum_lm.py
+|   |       recursive_lm.py
+|   |       textsynth.py
+|   |       utils.py
+|   |       vllm_causallms.py
+|   |       vllm_vlms.py
+|   |       __init__.py
+|   |       
+|   +---prompts
+|   |       __init__.py
+|   |       
+|   \---tasks
+|       |   README.md
+|       |   __init__.py
+|       |   
+|       +---aclue
+|       |       aclue_ancient_chinese_culture.yaml
+|       |       aclue_ancient_literature.yaml
+|       |       aclue_ancient_medical.yaml
+|       |       aclue_ancient_phonetics.yaml
+|       |       aclue_basic_ancient_chinese.yaml
+|       |       aclue_couplet_prediction.yaml
+|       |       aclue_homographic_character_resolution.yaml
+|       |       aclue_named_entity_recognition.yaml
+|       |       aclue_poetry_appreciate.yaml
+|       |       aclue_poetry_context_prediction.yaml
+|       |       aclue_poetry_quality_assessment.yaml
+|       |       aclue_poetry_sentiment_analysis.yaml
+|       |       aclue_polysemy_resolution.yaml
+|       |       aclue_reading_comprehension.yaml
+|       |       aclue_sentence_segmentation.yaml
+|       |       README.md
+|       |       _aclue.yaml
+|       |       _default_template_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---aexams
+|       |       aexams_Biology.yaml
+|       |       aexams_IslamicStudies.yaml
+|       |       aexams_Physics.yaml
+|       |       aexams_Science.yaml
+|       |       aexams_Social.yaml
+|       |       README.md
+|       |       _aexams.yaml
+|       |       _default_template_yaml
+|       |       
+|       +---afrimgsm
+|       |   |   gen_yaml.sh
+|       |   |   README.md
+|       |   |   run.sh
+|       |   |   utils.py
+|       |   |   
+|       |   +---direct
+|       |   |       afrimgsm_direct_amh.yaml
+|       |   |       afrimgsm_direct_eng.yaml
+|       |   |       afrimgsm_direct_ewe.yaml
+|       |   |       afrimgsm_direct_fra.yaml
+|       |   |       afrimgsm_direct_hau.yaml
+|       |   |       afrimgsm_direct_ibo.yaml
+|       |   |       afrimgsm_direct_kin.yaml
+|       |   |       afrimgsm_direct_lin.yaml
+|       |   |       afrimgsm_direct_lug.yaml
+|       |   |       afrimgsm_direct_orm.yaml
+|       |   |       afrimgsm_direct_sna.yaml
+|       |   |       afrimgsm_direct_sot.yaml
+|       |   |       afrimgsm_direct_swa.yaml
+|       |   |       afrimgsm_direct_twi.yaml
+|       |   |       afrimgsm_direct_wol.yaml
+|       |   |       afrimgsm_direct_xho.yaml
+|       |   |       afrimgsm_direct_yor.yaml
+|       |   |       afrimgsm_direct_zul.yaml
+|       |   |       direct_yaml
+|       |   |       
+|       |   +---en_cot
+|       |   |       afrimgsm_en_cot_amh.yaml
+|       |   |       afrimgsm_en_cot_eng.yaml
+|       |   |       afrimgsm_en_cot_ewe.yaml
+|       |   |       afrimgsm_en_cot_fra.yaml
+|       |   |       afrimgsm_en_cot_hau.yaml
+|       |   |       afrimgsm_en_cot_ibo.yaml
+|       |   |       afrimgsm_en_cot_kin.yaml
+|       |   |       afrimgsm_en_cot_lin.yaml
+|       |   |       afrimgsm_en_cot_lug.yaml
+|       |   |       afrimgsm_en_cot_orm.yaml
+|       |   |       afrimgsm_en_cot_sna.yaml
+|       |   |       afrimgsm_en_cot_sot.yaml
+|       |   |       afrimgsm_en_cot_swa.yaml
+|       |   |       afrimgsm_en_cot_twi.yaml
+|       |   |       afrimgsm_en_cot_wol.yaml
+|       |   |       afrimgsm_en_cot_xho.yaml
+|       |   |       afrimgsm_en_cot_yor.yaml
+|       |   |       afrimgsm_en_cot_zul.yaml
+|       |   |       cot_yaml
+|       |   |       
+|       |   \---translate
+|       |           afrimgsm_translate_amh.yaml
+|       |           afrimgsm_translate_eng.yaml
+|       |           afrimgsm_translate_ewe.yaml
+|       |           afrimgsm_translate_fra.yaml
+|       |           afrimgsm_translate_hau.yaml
+|       |           afrimgsm_translate_ibo.yaml
+|       |           afrimgsm_translate_kin.yaml
+|       |           afrimgsm_translate_lin.yaml
+|       |           afrimgsm_translate_lug.yaml
+|       |           afrimgsm_translate_orm.yaml
+|       |           afrimgsm_translate_sna.yaml
+|       |           afrimgsm_translate_sot.yaml
+|       |           afrimgsm_translate_swa.yaml
+|       |           afrimgsm_translate_twi.yaml
+|       |           afrimgsm_translate_wol.yaml
+|       |           afrimgsm_translate_xho.yaml
+|       |           afrimgsm_translate_yor.yaml
+|       |           afrimgsm_translate_zul.yaml
+|       |           translate_direct_yaml
+|       |           
+|       +---afrimmlu
+|       |   |   fewshot.sh
+|       |   |   README.md
+|       |   |   utils.py
+|       |   |   
+|       |   +---direct
+|       |   |       afrimmlu_common_yaml
+|       |   |       afrimmlu_direct_amh.yaml
+|       |   |       afrimmlu_direct_eng.yaml
+|       |   |       afrimmlu_direct_ewe.yaml
+|       |   |       afrimmlu_direct_fra.yaml
+|       |   |       afrimmlu_direct_hau.yaml
+|       |   |       afrimmlu_direct_ibo.yaml
+|       |   |       afrimmlu_direct_kin.yaml
+|       |   |       afrimmlu_direct_lin.yaml
+|       |   |       afrimmlu_direct_lug.yaml
+|       |   |       afrimmlu_direct_orm.yaml
+|       |   |       afrimmlu_direct_sna.yaml
+|       |   |       afrimmlu_direct_sot.yaml
+|       |   |       afrimmlu_direct_swa.yaml
+|       |   |       afrimmlu_direct_twi.yaml
+|       |   |       afrimmlu_direct_wol.yaml
+|       |   |       afrimmlu_direct_xho.yaml
+|       |   |       afrimmlu_direct_yor.yaml
+|       |   |       afrimmlu_direct_zul.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   \---translate
+|       |           afrimmlu_common_translate_yaml
+|       |           afrimmlu_translate_amh.yaml
+|       |           afrimmlu_translate_eng.yaml
+|       |           afrimmlu_translate_ewe.yaml
+|       |           afrimmlu_translate_fra.yaml
+|       |           afrimmlu_translate_hau.yaml
+|       |           afrimmlu_translate_ibo.yaml
+|       |           afrimmlu_translate_kin.yaml
+|       |           afrimmlu_translate_lin.yaml
+|       |           afrimmlu_translate_lug.yaml
+|       |           afrimmlu_translate_orm.yaml
+|       |           afrimmlu_translate_sna.yaml
+|       |           afrimmlu_translate_sot.yaml
+|       |           afrimmlu_translate_swa.yaml
+|       |           afrimmlu_translate_twi.yaml
+|       |           afrimmlu_translate_wol.yaml
+|       |           afrimmlu_translate_xho.yaml
+|       |           afrimmlu_translate_yor.yaml
+|       |           afrimmlu_translate_zul.yaml
+|       |           utils.py
+|       |           
+|       +---afrixnli
+|       |   |   README.md
+|       |   |   utils.py
+|       |   |   
+|       |   +---anli prompt
+|       |   |   +---en-direct
+|       |   |   |       afrixnli_en_direct_amh.yaml
+|       |   |   |       afrixnli_en_direct_eng.yaml
+|       |   |   |       afrixnli_en_direct_ewe.yaml
+|       |   |   |       afrixnli_en_direct_fra.yaml
+|       |   |   |       afrixnli_en_direct_hau.yaml
+|       |   |   |       afrixnli_en_direct_ibo.yaml
+|       |   |   |       afrixnli_en_direct_kin.yaml
+|       |   |   |       afrixnli_en_direct_lin.yaml
+|       |   |   |       afrixnli_en_direct_lug.yaml
+|       |   |   |       afrixnli_en_direct_orm.yaml
+|       |   |   |       afrixnli_en_direct_sna.yaml
+|       |   |   |       afrixnli_en_direct_sot.yaml
+|       |   |   |       afrixnli_en_direct_swa.yaml
+|       |   |   |       afrixnli_en_direct_twi.yaml
+|       |   |   |       afrixnli_en_direct_wol.yaml
+|       |   |   |       afrixnli_en_direct_xho.yaml
+|       |   |   |       afrixnli_en_direct_yaml
+|       |   |   |       afrixnli_en_direct_yor.yaml
+|       |   |   |       afrixnli_en_direct_zul.yaml
+|       |   |   |       utils.py
+|       |   |   |       
+|       |   |   +---native-direct
+|       |   |   |       afrixnli_native_direct_amh.yaml
+|       |   |   |       afrixnli_native_direct_eng.yaml
+|       |   |   |       afrixnli_native_direct_ewe.yaml
+|       |   |   |       afrixnli_native_direct_fra.yaml
+|       |   |   |       afrixnli_native_direct_hau.yaml
+|       |   |   |       afrixnli_native_direct_ibo.yaml
+|       |   |   |       afrixnli_native_direct_kin.yaml
+|       |   |   |       afrixnli_native_direct_lin.yaml
+|       |   |   |       afrixnli_native_direct_lug.yaml
+|       |   |   |       afrixnli_native_direct_orm.yaml
+|       |   |   |       afrixnli_native_direct_sna.yaml
+|       |   |   |       afrixnli_native_direct_sot.yaml
+|       |   |   |       afrixnli_native_direct_swa.yaml
+|       |   |   |       afrixnli_native_direct_twi.yaml
+|       |   |   |       afrixnli_native_direct_wol.yaml
+|       |   |   |       afrixnli_native_direct_xho.yaml
+|       |   |   |       afrixnli_native_direct_yaml
+|       |   |   |       afrixnli_native_direct_yor.yaml
+|       |   |   |       afrixnli_native_direct_zul.yaml
+|       |   |   |       utils.py
+|       |   |   |       
+|       |   |   \---translate
+|       |   |           afrixnli_translate_amh.yaml
+|       |   |           afrixnli_translate_ewe.yaml
+|       |   |           afrixnli_translate_fra.yaml
+|       |   |           afrixnli_translate_hau.yaml
+|       |   |           afrixnli_translate_ibo.yaml
+|       |   |           afrixnli_translate_kin.yaml
+|       |   |           afrixnli_translate_lin.yaml
+|       |   |           afrixnli_translate_lug.yaml
+|       |   |           afrixnli_translate_orm.yaml
+|       |   |           afrixnli_translate_sna.yaml
+|       |   |           afrixnli_translate_sot.yaml
+|       |   |           afrixnli_translate_swa.yaml
+|       |   |           afrixnli_translate_twi.yaml
+|       |   |           afrixnli_translate_wol.yaml
+|       |   |           afrixnli_translate_xho.yaml
+|       |   |           afrixnli_translate_yaml
+|       |   |           afrixnli_translate_yor.yaml
+|       |   |           afrixnli_translate_zul.yaml
+|       |   |           utils.py
+|       |   |           
+|       |   \---lai prompt
+|       |       +---direct
+|       |       |       afrixnli_manual_direct_amh.yaml
+|       |       |       afrixnli_manual_direct_eng.yaml
+|       |       |       afrixnli_manual_direct_ewe.yaml
+|       |       |       afrixnli_manual_direct_fra.yaml
+|       |       |       afrixnli_manual_direct_hau.yaml
+|       |       |       afrixnli_manual_direct_ibo.yaml
+|       |       |       afrixnli_manual_direct_kin.yaml
+|       |       |       afrixnli_manual_direct_lin.yaml
+|       |       |       afrixnli_manual_direct_lug.yaml
+|       |       |       afrixnli_manual_direct_orm.yaml
+|       |       |       afrixnli_manual_direct_sna.yaml
+|       |       |       afrixnli_manual_direct_sot.yaml
+|       |       |       afrixnli_manual_direct_swa.yaml
+|       |       |       afrixnli_manual_direct_twi.yaml
+|       |       |       afrixnli_manual_direct_wol.yaml
+|       |       |       afrixnli_manual_direct_xho.yaml
+|       |       |       afrixnli_manual_direct_yaml
+|       |       |       afrixnli_manual_direct_yor.yaml
+|       |       |       afrixnli_manual_direct_zul.yaml
+|       |       |       utils.py
+|       |       |       
+|       |       \---translate
+|       |               afrixnli_manual_translate_amh.yaml
+|       |               afrixnli_manual_translate_ewe.yaml
+|       |               afrixnli_manual_translate_fra.yaml
+|       |               afrixnli_manual_translate_hau.yaml
+|       |               afrixnli_manual_translate_ibo.yaml
+|       |               afrixnli_manual_translate_kin.yaml
+|       |               afrixnli_manual_translate_lin.yaml
+|       |               afrixnli_manual_translate_lug.yaml
+|       |               afrixnli_manual_translate_orm.yaml
+|       |               afrixnli_manual_translate_sna.yaml
+|       |               afrixnli_manual_translate_sot.yaml
+|       |               afrixnli_manual_translate_swa.yaml
+|       |               afrixnli_manual_translate_twi.yaml
+|       |               afrixnli_manual_translate_wol.yaml
+|       |               afrixnli_manual_translate_xho.yaml
+|       |               afrixnli_manual_translate_yaml
+|       |               afrixnli_manual_translate_yor.yaml
+|       |               afrixnli_manual_translate_zul.yaml
+|       |               utils.py
+|       |               
+|       +---agieval
+|       |       agieval.yaml
+|       |       agieval_cn.yaml
+|       |       agieval_en.yaml
+|       |       agieval_nous.yaml
+|       |       aqua-rat.yaml
+|       |       gaokao-biology.yaml
+|       |       gaokao-chemistry.yaml
+|       |       gaokao-chinese.yaml
+|       |       gaokao-english.yaml
+|       |       gaokao-geography.yaml
+|       |       gaokao-history.yaml
+|       |       gaokao-mathcloze.yaml
+|       |       gaokao-mathqa.yaml
+|       |       gaokao-physics.yaml
+|       |       jec-qa-ca.yaml
+|       |       jec-qa-kd.yaml
+|       |       logiqa-en.yaml
+|       |       logiqa-zh.yaml
+|       |       lsat-ar.yaml
+|       |       lsat-lr.yaml
+|       |       lsat-rc.yaml
+|       |       math.yaml
+|       |       README.md
+|       |       sat-en-without-passage.yaml
+|       |       sat-en.yaml
+|       |       sat-math.yaml
+|       |       utils.py
+|       |       
+|       +---alghafa
+|       |   +---copa_ar
+|       |   |       copa_ar.yaml
+|       |   |       README.md
+|       |   |       
+|       |   \---piqa_ar
+|       |           piqa_ar.yaml
+|       |           README.md
+|       |           
+|       +---anli
+|       |       anli_r1.yaml
+|       |       anli_r2.yaml
+|       |       anli_r3.yaml
+|       |       README.md
+|       |       
+|       +---arabicmmlu
+|       |       arabicmmlu_arabic_language_general.yaml
+|       |       arabicmmlu_arabic_language_grammar.yaml
+|       |       arabicmmlu_driving_test.yaml
+|       |       arabicmmlu_general_knowledge.yaml
+|       |       arabicmmlu_high_arabic_language.yaml
+|       |       arabicmmlu_high_biology.yaml
+|       |       arabicmmlu_high_civics.yaml
+|       |       arabicmmlu_high_computer_science.yaml
+|       |       arabicmmlu_high_economics.yaml
+|       |       arabicmmlu_high_geography.yaml
+|       |       arabicmmlu_high_history.yaml
+|       |       arabicmmlu_high_islamic_studies.yaml
+|       |       arabicmmlu_high_philosophy.yaml
+|       |       arabicmmlu_high_physics.yaml
+|       |       arabicmmlu_islamic_studies.yaml
+|       |       arabicmmlu_middle_arabic_language.yaml
+|       |       arabicmmlu_middle_civics.yaml
+|       |       arabicmmlu_middle_computer_science.yaml
+|       |       arabicmmlu_middle_economics.yaml
+|       |       arabicmmlu_middle_general_knowledge.yaml
+|       |       arabicmmlu_middle_geography.yaml
+|       |       arabicmmlu_middle_history.yaml
+|       |       arabicmmlu_middle_islamic_studies.yaml
+|       |       arabicmmlu_middle_natural_science.yaml
+|       |       arabicmmlu_middle_social_science.yaml
+|       |       arabicmmlu_primary_arabic_language.yaml
+|       |       arabicmmlu_primary_computer_science.yaml
+|       |       arabicmmlu_primary_general_knowledge.yaml
+|       |       arabicmmlu_primary_geography.yaml
+|       |       arabicmmlu_primary_history.yaml
+|       |       arabicmmlu_primary_islamic_studies.yaml
+|       |       arabicmmlu_primary_math.yaml
+|       |       arabicmmlu_primary_natural_science.yaml
+|       |       arabicmmlu_primary_social_science.yaml
+|       |       arabicmmlu_prof_law.yaml
+|       |       arabicmmlu_univ_accounting.yaml
+|       |       arabicmmlu_univ_computer_science.yaml
+|       |       arabicmmlu_univ_economics.yaml
+|       |       arabicmmlu_univ_management.yaml
+|       |       arabicmmlu_univ_political_science.yaml
+|       |       README.md
+|       |       utils.py
+|       |       _arabicmmlu.yaml
+|       |       _arabicmmlu_humanities.yaml
+|       |       _arabicmmlu_language.yaml
+|       |       _arabicmmlu_other.yaml
+|       |       _arabicmmlu_social_science.yaml
+|       |       _arabicmmlu_stem.yaml
+|       |       _default_arabicmmlu_template_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---arabic_leaderboard_complete
+|       |   |   arabic_leaderboard_complete.yaml
+|       |   |   README.md
+|       |   |   
+|       |   +---arabic_leaderboard_alghafa
+|       |   |       arabic_leaderboard_alghafa.yaml
+|       |   |       arabic_leaderboard_alghafa_mcq_exams_test_ar.yaml
+|       |   |       arabic_leaderboard_alghafa_meta_ar_dialects.yaml
+|       |   |       arabic_leaderboard_alghafa_meta_ar_msa.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_facts_truefalse_balanced_task.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_grounded_statement_soqal_task.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_grounded_statement_xglue_mlqa_task.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_rating_sentiment_no_neutral_task.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_rating_sentiment_task.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_sentiment_task.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_exams
+|       |   |       arabic_exams.yaml
+|       |   |       arabic_leaderboard_arabic_exams.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mmlu
+|       |   |       arabic_leaderboard_arabic_mmlu.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_abstract_algebra.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_anatomy.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_astronomy.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_business_ethics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_clinical_knowledge.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_biology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_chemistry.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_computer_science.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_mathematics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_medicine.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_physics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_computer_security.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_conceptual_physics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_econometrics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_electrical_engineering.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_elementary_mathematics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_formal_logic.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_global_facts.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_biology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_chemistry.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_computer_science.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_european_history.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_geography.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_government_and_politics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_macroeconomics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_mathematics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_microeconomics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_physics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_psychology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_statistics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_us_history.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_world_history.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_human_aging.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_human_sexuality.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_international_law.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_jurisprudence.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_logical_fallacies.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_machine_learning.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_management.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_marketing.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_medical_genetics.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_miscellaneous.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_moral_disputes.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_moral_scenarios.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_nutrition.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_philosophy.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_prehistory.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_accounting.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_law.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_medicine.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_psychology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_public_relations.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_security_studies.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_sociology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_us_foreign_policy.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_virology.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_world_religions.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_arc_challenge
+|       |   |       arabic_leaderboard_arabic_mt_arc_challenge.yaml
+|       |   |       arabic_mt_arc_challenge.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_arc_easy
+|       |   |       arabic_leaderboard_arabic_mt_arc_easy.yaml
+|       |   |       arabic_mt_arc_easy.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_boolq
+|       |   |       arabic_leaderboard_arabic_mt_boolq.yaml
+|       |   |       arabic_mt_boolq.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_copa
+|       |   |       arabic_leaderboard_arabic_mt_copa.yaml
+|       |   |       arabic_mt_copa.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_hellaswag
+|       |   |       arabic_leaderboard_arabic_mt_hellaswag.yaml
+|       |   |       arabic_mt_hellaswag.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_mmlu
+|       |   |       arabic_leaderboard_arabic_mt_mmlu.yaml
+|       |   |       arabic_mt_mmlu.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_openbook_qa
+|       |   |       arabic_leaderboard_arabic_mt_openbook_qa.yaml
+|       |   |       arabic_mt_openbook_qa.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_piqa
+|       |   |       arabic_leaderboard_arabic_mt_piqa.yaml
+|       |   |       arabic_mt_piqa.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_race
+|       |   |       arabic_leaderboard_arabic_mt_race.yaml
+|       |   |       arabic_mt_race.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_sciq
+|       |   |       arabic_leaderboard_arabic_mt_sciq.yaml
+|       |   |       arabic_mt_sciq.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_toxigen
+|       |   |       arabic_leaderboard_arabic_mt_toxigen.yaml
+|       |   |       arabic_mt_toxigen.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   \---arabic_leaderboard_avca
+|       |           arabic_leaderboard_acva.yaml
+|       |           arabic_leaderboard_acva_Algeria.yaml
+|       |           arabic_leaderboard_acva_Ancient_Egypt.yaml
+|       |           arabic_leaderboard_acva_Arabic_Architecture.yaml
+|       |           arabic_leaderboard_acva_Arabic_Art.yaml
+|       |           arabic_leaderboard_acva_Arabic_Astronomy.yaml
+|       |           arabic_leaderboard_acva_Arabic_Calligraphy.yaml
+|       |           arabic_leaderboard_acva_Arabic_Ceremony.yaml
+|       |           arabic_leaderboard_acva_Arabic_Clothing.yaml
+|       |           arabic_leaderboard_acva_Arabic_Culture.yaml
+|       |           arabic_leaderboard_acva_Arabic_Food.yaml
+|       |           arabic_leaderboard_acva_Arabic_Funeral.yaml
+|       |           arabic_leaderboard_acva_Arabic_Geography.yaml
+|       |           arabic_leaderboard_acva_Arabic_History.yaml
+|       |           arabic_leaderboard_acva_Arabic_Language_Origin.yaml
+|       |           arabic_leaderboard_acva_Arabic_Literature.yaml
+|       |           arabic_leaderboard_acva_Arabic_Math.yaml
+|       |           arabic_leaderboard_acva_Arabic_Medicine.yaml
+|       |           arabic_leaderboard_acva_Arabic_Music.yaml
+|       |           arabic_leaderboard_acva_Arabic_Ornament.yaml
+|       |           arabic_leaderboard_acva_Arabic_Philosophy.yaml
+|       |           arabic_leaderboard_acva_Arabic_Physics_and_Chemistry.yaml
+|       |           arabic_leaderboard_acva_Arabic_Wedding.yaml
+|       |           arabic_leaderboard_acva_Arab_Empire.yaml
+|       |           arabic_leaderboard_acva_Bahrain.yaml
+|       |           arabic_leaderboard_acva_communication.yaml
+|       |           arabic_leaderboard_acva_Comoros.yaml
+|       |           arabic_leaderboard_acva_computer_and_phone.yaml
+|       |           arabic_leaderboard_acva_daily_life.yaml
+|       |           arabic_leaderboard_acva_Egypt_modern.yaml
+|       |           arabic_leaderboard_acva_entertainment.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromAncientEgypt.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromByzantium.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromChina.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromGreece.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromIslam.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromPersia.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromRome.yaml
+|       |           arabic_leaderboard_acva_Iraq.yaml
+|       |           arabic_leaderboard_acva_Islamic_law_system.yaml
+|       |           arabic_leaderboard_acva_Islam_branches_and_schools.yaml
+|       |           arabic_leaderboard_acva_Islam_Education.yaml
+|       |           arabic_leaderboard_acva_Jordan.yaml
+|       |           arabic_leaderboard_acva_Kuwait.yaml
+|       |           arabic_leaderboard_acva_Lebanon.yaml
+|       |           arabic_leaderboard_acva_Libya.yaml
+|       |           arabic_leaderboard_acva_Mauritania.yaml
+|       |           arabic_leaderboard_acva_Mesopotamia_civilization.yaml
+|       |           arabic_leaderboard_acva_Morocco.yaml
+|       |           arabic_leaderboard_acva_Oman.yaml
+|       |           arabic_leaderboard_acva_Palestine.yaml
+|       |           arabic_leaderboard_acva_Qatar.yaml
+|       |           arabic_leaderboard_acva_Saudi_Arabia.yaml
+|       |           arabic_leaderboard_acva_Somalia.yaml
+|       |           arabic_leaderboard_acva_Sudan.yaml
+|       |           arabic_leaderboard_acva_Syria.yaml
+|       |           arabic_leaderboard_acva_Tunisia.yaml
+|       |           arabic_leaderboard_acva_United_Arab_Emirates.yaml
+|       |           arabic_leaderboard_acva_Yemen.yaml
+|       |           utils.py
+|       |           
+|       +---arabic_leaderboard_light
+|       |   |   arabic_leaderboard_light.yaml
+|       |   |   README.md
+|       |   |   
+|       |   +---arabic_leaderboard_alghafa_light
+|       |   |       arabic_leaderboard_alghafa_light.yaml
+|       |   |       arabic_leaderboard_alghafa_mcq_exams_test_ar_light.yaml
+|       |   |       arabic_leaderboard_alghafa_meta_ar_dialects_light.yaml
+|       |   |       arabic_leaderboard_alghafa_meta_ar_msa_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_facts_truefalse_balanced_task_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_grounded_statement_soqal_task_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_grounded_statement_xglue_mlqa_task_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_rating_sentiment_no_neutral_task_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_rating_sentiment_task_light.yaml
+|       |   |       arabic_leaderboard_alghafa_multiple_choice_sentiment_task_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_exams_light
+|       |   |       arabic_exams_light.yaml
+|       |   |       arabic_leaderboard_arabic_exams_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mmlu_light
+|       |   |       arabic_leaderboard_arabic_mmlu_abstract_algebra_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_anatomy_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_astronomy_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_business_ethics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_clinical_knowledge_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_biology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_chemistry_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_computer_science_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_mathematics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_medicine_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_college_physics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_computer_security_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_conceptual_physics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_econometrics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_electrical_engineering_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_elementary_mathematics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_formal_logic_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_global_facts_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_biology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_chemistry_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_computer_science_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_european_history_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_geography_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_government_and_politics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_macroeconomics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_mathematics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_microeconomics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_physics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_psychology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_statistics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_us_history_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_high_school_world_history_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_human_aging_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_human_sexuality_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_international_law_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_jurisprudence_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_logical_fallacies_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_machine_learning_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_management_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_marketing_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_medical_genetics_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_miscellaneous_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_moral_disputes_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_moral_scenarios_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_nutrition_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_philosophy_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_prehistory_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_accounting_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_law_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_medicine_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_professional_psychology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_public_relations_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_security_studies_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_sociology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_us_foreign_policy_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_virology_light.yaml
+|       |   |       arabic_leaderboard_arabic_mmlu_world_religions_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_arc_challenge_light
+|       |   |       arabic_leaderboard_arabic_mt_arc_challenge_light.yaml
+|       |   |       arabic_mt_arc_challenge_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_arc_easy_light
+|       |   |       arabic_leaderboard_arabic_mt_arc_easy_light.yaml
+|       |   |       arabic_mt_arc_easy_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_boolq_light
+|       |   |       arabic_leaderboard_arabic_mt_boolq_light.yaml
+|       |   |       arabic_mt_boolq_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_copa_light
+|       |   |       arabic_mt_copa_light.yaml
+|       |   |       arbic_leaderboard_arabic_mt_copa_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_hellaswag_light
+|       |   |       arabic_leaderboard_arabic_mt_hellaswag_light.yaml
+|       |   |       arabic_mt_hellaswag_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_mmlu_light
+|       |   |       arabic_leaderboard_arabic_mt_mmlu_light.yaml
+|       |   |       arabic_mt_mmlu_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_openbook_qa_light
+|       |   |       arabic_leaderboard_arabic_mt_openbook_qa_light.yaml
+|       |   |       arabic_mt_openbook_qa_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_piqa_light
+|       |   |       arabic_leaderboard_arabic_mt_piqa_light.yaml
+|       |   |       arabic_mt_piqa_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_race_light
+|       |   |       arabic_leaderboard_arabic_mt_race_light.yaml
+|       |   |       arabic_mt_race_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_sciq_light
+|       |   |       arabic_leaderboard_arabic_mt_sciq_light.yaml
+|       |   |       arabic_mt_sciq_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---arabic_leaderboard_arabic_mt_toxigen_light
+|       |   |       arabic_leaderboard_arabic_mt_toxigen_light.yaml
+|       |   |       arabic_mt_toxigen_light.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   \---arabic_leaderboard_avca_light
+|       |           arabic_leaderboard_acva_Algeria_light.yaml
+|       |           arabic_leaderboard_acva_Ancient_Egypt_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Architecture_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Art_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Astronomy_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Calligraphy_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Ceremony_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Clothing_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Culture_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Food_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Funeral_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Geography_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_History_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Language_Origin_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Literature_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Math_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Medicine_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Music_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Ornament_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Philosophy_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Physics_and_Chemistry_light.yaml
+|       |           arabic_leaderboard_acva_Arabic_Wedding_light.yaml
+|       |           arabic_leaderboard_acva_Arab_Empire_light.yaml
+|       |           arabic_leaderboard_acva_Bahrain_light.yaml
+|       |           arabic_leaderboard_acva_communication_light.yaml
+|       |           arabic_leaderboard_acva_Comoros_light.yaml
+|       |           arabic_leaderboard_acva_computer_and_phone_light.yaml
+|       |           arabic_leaderboard_acva_daily_life_light.yaml
+|       |           arabic_leaderboard_acva_Egypt_modern_light.yaml
+|       |           arabic_leaderboard_acva_entertainment_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromAncientEgypt_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromByzantium_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromChina_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromGreece_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromIslam_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromPersia_light.yaml
+|       |           arabic_leaderboard_acva_InfluenceFromRome_light.yaml
+|       |           arabic_leaderboard_acva_Iraq_light.yaml
+|       |           arabic_leaderboard_acva_Islamic_law_system_light.yaml
+|       |           arabic_leaderboard_acva_Islam_branches_and_schools_light.yaml
+|       |           arabic_leaderboard_acva_Islam_Education_light.yaml
+|       |           arabic_leaderboard_acva_Jordan_light.yaml
+|       |           arabic_leaderboard_acva_Kuwait_light.yaml
+|       |           arabic_leaderboard_acva_Lebanon_light.yaml
+|       |           arabic_leaderboard_acva_Libya_light.yaml
+|       |           arabic_leaderboard_acva_light.yaml
+|       |           arabic_leaderboard_acva_Mauritania_light.yaml
+|       |           arabic_leaderboard_acva_Mesopotamia_civilization_light.yaml
+|       |           arabic_leaderboard_acva_Morocco_light.yaml
+|       |           arabic_leaderboard_acva_Oman_light.yaml
+|       |           arabic_leaderboard_acva_Palestine_light.yaml
+|       |           arabic_leaderboard_acva_Qatar_light.yaml
+|       |           arabic_leaderboard_acva_Saudi_Arabia_light.yaml
+|       |           arabic_leaderboard_acva_Somalia_light.yaml
+|       |           arabic_leaderboard_acva_Sudan_light.yaml
+|       |           arabic_leaderboard_acva_Syria_light.yaml
+|       |           arabic_leaderboard_acva_Tunisia_light.yaml
+|       |           arabic_leaderboard_acva_United_Arab_Emirates_light.yaml
+|       |           arabic_leaderboard_acva_Yemen_light.yaml
+|       |           utils.py
+|       |           
+|       +---arc
+|       |       arc_challenge.yaml
+|       |       arc_easy.yaml
+|       |       README.md
+|       |       
+|       +---arc_mt
+|       |       arc_challenge_mt_da.yaml
+|       |       arc_challenge_mt_de.yaml
+|       |       arc_challenge_mt_el.yaml
+|       |       arc_challenge_mt_es.yaml
+|       |       arc_challenge_mt_fi.yaml
+|       |       arc_challenge_mt_hu.yaml
+|       |       arc_challenge_mt_is.yaml
+|       |       arc_challenge_mt_it.yaml
+|       |       arc_challenge_mt_nb.yaml
+|       |       arc_challenge_mt_pl.yaml
+|       |       arc_challenge_mt_pt.yaml
+|       |       arc_challenge_mt_sv.yaml
+|       |       README.md
+|       |       
+|       +---arithmetic
+|       |       arithmetic_1dc.yaml
+|       |       arithmetic_2da.yaml
+|       |       arithmetic_2dm.yaml
+|       |       arithmetic_2ds.yaml
+|       |       arithmetic_3da.yaml
+|       |       arithmetic_3ds.yaml
+|       |       arithmetic_4da.yaml
+|       |       arithmetic_4ds.yaml
+|       |       arithmetic_5da.yaml
+|       |       arithmetic_5ds.yaml
+|       |       README.md
+|       |       
+|       +---asdiv
+|       |       asdiv-cot-llama.yaml
+|       |       default.yaml
+|       |       README.md
+|       |       
+|       +---babi
+|       |       babi.yaml
+|       |       README.md
+|       |       
+|       +---basqueglue
+|       |       bec.yaml
+|       |       bhtc.yaml
+|       |       coref.yaml
+|       |       qnli.yaml
+|       |       README.md
+|       |       utils.py
+|       |       vaxx.yaml
+|       |       wic.yaml
+|       |       
+|       +---basque_bench
+|       |   |   basque_bench.yaml
+|       |   |   mgsm_cot_native_eu.yaml
+|       |   |   mgsm_direct_eu.yaml
+|       |   |   README.md
+|       |   |   utils.py
+|       |   |   wnli_eu.yaml
+|       |   |   xcopa_eu.yaml
+|       |   |   
+|       |   \---flores_eu
+|       |           create_yamls_flores_eu.py
+|       |           flores_ca-eu.yaml
+|       |           flores_de-eu.yaml
+|       |           flores_en-eu.yaml
+|       |           flores_es-eu.yaml
+|       |           flores_eu-ca.yaml
+|       |           flores_eu-de.yaml
+|       |           flores_eu-en.yaml
+|       |           flores_eu-es.yaml
+|       |           flores_eu-fr.yaml
+|       |           flores_eu-gl.yaml
+|       |           flores_eu-it.yaml
+|       |           flores_eu-pt.yaml
+|       |           flores_eu.yaml
+|       |           flores_fr-eu.yaml
+|       |           flores_gl-eu.yaml
+|       |           flores_it-eu.yaml
+|       |           flores_pt-eu.yaml
+|       |           _flores_common_yaml
+|       |           
+|       +---bbh
+|       |   |   README.md
+|       |   |   _generate_configs.py
+|       |   |   
+|       |   +---cot_fewshot
+|       |   |       boolean_expressions.yaml
+|       |   |       causal_judgement.yaml
+|       |   |       date_understanding.yaml
+|       |   |       disambiguation_qa.yaml
+|       |   |       dyck_languages.yaml
+|       |   |       formal_fallacies.yaml
+|       |   |       geometric_shapes.yaml
+|       |   |       hyperbaton.yaml
+|       |   |       logical_deduction_five_objects.yaml
+|       |   |       logical_deduction_seven_objects.yaml
+|       |   |       logical_deduction_three_objects.yaml
+|       |   |       movie_recommendation.yaml
+|       |   |       multistep_arithmetic_two.yaml
+|       |   |       navigate.yaml
+|       |   |       object_counting.yaml
+|       |   |       penguins_in_a_table.yaml
+|       |   |       reasoning_about_colored_objects.yaml
+|       |   |       ruin_names.yaml
+|       |   |       salient_translation_error_detection.yaml
+|       |   |       snarks.yaml
+|       |   |       sports_understanding.yaml
+|       |   |       temporal_sequences.yaml
+|       |   |       tracking_shuffled_objects_five_objects.yaml
+|       |   |       tracking_shuffled_objects_seven_objects.yaml
+|       |   |       tracking_shuffled_objects_three_objects.yaml
+|       |   |       web_of_lies.yaml
+|       |   |       word_sorting.yaml
+|       |   |       _bbh.yaml
+|       |   |       _bbh_cot_fewshot.yaml
+|       |   |       _cot_fewshot_template_yaml
+|       |   |       
+|       |   +---cot_zeroshot
+|       |   |       boolean_expressions.yaml
+|       |   |       causal_judgement.yaml
+|       |   |       date_understanding.yaml
+|       |   |       disambiguation_qa.yaml
+|       |   |       dyck_languages.yaml
+|       |   |       formal_fallacies.yaml
+|       |   |       geometric_shapes.yaml
+|       |   |       hyperbaton.yaml
+|       |   |       logical_deduction_five_objects.yaml
+|       |   |       logical_deduction_seven_objects.yaml
+|       |   |       logical_deduction_three_objects.yaml
+|       |   |       movie_recommendation.yaml
+|       |   |       multistep_arithmetic_two.yaml
+|       |   |       navigate.yaml
+|       |   |       object_counting.yaml
+|       |   |       penguins_in_a_table.yaml
+|       |   |       reasoning_about_colored_objects.yaml
+|       |   |       ruin_names.yaml
+|       |   |       salient_translation_error_detection.yaml
+|       |   |       snarks.yaml
+|       |   |       sports_understanding.yaml
+|       |   |       temporal_sequences.yaml
+|       |   |       tracking_shuffled_objects_five_objects.yaml
+|       |   |       tracking_shuffled_objects_seven_objects.yaml
+|       |   |       tracking_shuffled_objects_three_objects.yaml
+|       |   |       utils.py
+|       |   |       web_of_lies.yaml
+|       |   |       word_sorting.yaml
+|       |   |       _bbh_cot_zeroshot.yaml
+|       |   |       _cot_zeroshot_template_yaml
+|       |   |       
+|       |   +---fewshot
+|       |   |       boolean_expressions.yaml
+|       |   |       causal_judgement.yaml
+|       |   |       date_understanding.yaml
+|       |   |       disambiguation_qa.yaml
+|       |   |       dyck_languages.yaml
+|       |   |       formal_fallacies.yaml
+|       |   |       geometric_shapes.yaml
+|       |   |       hyperbaton.yaml
+|       |   |       logical_deduction_five_objects.yaml
+|       |   |       logical_deduction_seven_objects.yaml
+|       |   |       logical_deduction_three_objects.yaml
+|       |   |       movie_recommendation.yaml
+|       |   |       multistep_arithmetic_two.yaml
+|       |   |       navigate.yaml
+|       |   |       object_counting.yaml
+|       |   |       penguins_in_a_table.yaml
+|       |   |       reasoning_about_colored_objects.yaml
+|       |   |       ruin_names.yaml
+|       |   |       salient_translation_error_detection.yaml
+|       |   |       snarks.yaml
+|       |   |       sports_understanding.yaml
+|       |   |       temporal_sequences.yaml
+|       |   |       tracking_shuffled_objects_five_objects.yaml
+|       |   |       tracking_shuffled_objects_seven_objects.yaml
+|       |   |       tracking_shuffled_objects_three_objects.yaml
+|       |   |       web_of_lies.yaml
+|       |   |       word_sorting.yaml
+|       |   |       _bbh_fewshot.yaml
+|       |   |       _fewshot_template_yaml
+|       |   |       
+|       |   \---zeroshot
+|       |           boolean_expressions.yaml
+|       |           causal_judgement.yaml
+|       |           date_understanding.yaml
+|       |           disambiguation_qa.yaml
+|       |           dyck_languages.yaml
+|       |           formal_fallacies.yaml
+|       |           geometric_shapes.yaml
+|       |           hyperbaton.yaml
+|       |           logical_deduction_five_objects.yaml
+|       |           logical_deduction_seven_objects.yaml
+|       |           logical_deduction_three_objects.yaml
+|       |           movie_recommendation.yaml
+|       |           multistep_arithmetic_two.yaml
+|       |           navigate.yaml
+|       |           object_counting.yaml
+|       |           penguins_in_a_table.yaml
+|       |           reasoning_about_colored_objects.yaml
+|       |           ruin_names.yaml
+|       |           salient_translation_error_detection.yaml
+|       |           snarks.yaml
+|       |           sports_understanding.yaml
+|       |           temporal_sequences.yaml
+|       |           tracking_shuffled_objects_five_objects.yaml
+|       |           tracking_shuffled_objects_seven_objects.yaml
+|       |           tracking_shuffled_objects_three_objects.yaml
+|       |           utils.py
+|       |           web_of_lies.yaml
+|       |           word_sorting.yaml
+|       |           _bbh_zeroshot.yaml
+|       |           _zeroshot_template_yaml
+|       |           
+|       +---belebele
+|       |       belebele_acm_Arab.yaml
+|       |       belebele_afr_Latn.yaml
+|       |       belebele_als_Latn.yaml
+|       |       belebele_amh_Ethi.yaml
+|       |       belebele_apc_Arab.yaml
+|       |       belebele_arb_Arab.yaml
+|       |       belebele_arb_Latn.yaml
+|       |       belebele_ars_Arab.yaml
+|       |       belebele_ary_Arab.yaml
+|       |       belebele_arz_Arab.yaml
+|       |       belebele_asm_Beng.yaml
+|       |       belebele_azj_Latn.yaml
+|       |       belebele_bam_Latn.yaml
+|       |       belebele_ben_Beng.yaml
+|       |       belebele_ben_Latn.yaml
+|       |       belebele_bod_Tibt.yaml
+|       |       belebele_bul_Cyrl.yaml
+|       |       belebele_cat_Latn.yaml
+|       |       belebele_ceb_Latn.yaml
+|       |       belebele_ces_Latn.yaml
+|       |       belebele_ckb_Arab.yaml
+|       |       belebele_dan_Latn.yaml
+|       |       belebele_deu_Latn.yaml
+|       |       belebele_ell_Grek.yaml
+|       |       belebele_eng_Latn.yaml
+|       |       belebele_est_Latn.yaml
+|       |       belebele_eus_Latn.yaml
+|       |       belebele_fin_Latn.yaml
+|       |       belebele_fra_Latn.yaml
+|       |       belebele_fuv_Latn.yaml
+|       |       belebele_gaz_Latn.yaml
+|       |       belebele_grn_Latn.yaml
+|       |       belebele_guj_Gujr.yaml
+|       |       belebele_hat_Latn.yaml
+|       |       belebele_hau_Latn.yaml
+|       |       belebele_heb_Hebr.yaml
+|       |       belebele_hin_Deva.yaml
+|       |       belebele_hin_Latn.yaml
+|       |       belebele_hrv_Latn.yaml
+|       |       belebele_hun_Latn.yaml
+|       |       belebele_hye_Armn.yaml
+|       |       belebele_ibo_Latn.yaml
+|       |       belebele_ilo_Latn.yaml
+|       |       belebele_ind_Latn.yaml
+|       |       belebele_isl_Latn.yaml
+|       |       belebele_ita_Latn.yaml
+|       |       belebele_jav_Latn.yaml
+|       |       belebele_jpn_Jpan.yaml
+|       |       belebele_kac_Latn.yaml
+|       |       belebele_kan_Knda.yaml
+|       |       belebele_kat_Geor.yaml
+|       |       belebele_kaz_Cyrl.yaml
+|       |       belebele_kea_Latn.yaml
+|       |       belebele_khk_Cyrl.yaml
+|       |       belebele_khm_Khmr.yaml
+|       |       belebele_kin_Latn.yaml
+|       |       belebele_kir_Cyrl.yaml
+|       |       belebele_kor_Hang.yaml
+|       |       belebele_lao_Laoo.yaml
+|       |       belebele_lin_Latn.yaml
+|       |       belebele_lit_Latn.yaml
+|       |       belebele_lug_Latn.yaml
+|       |       belebele_luo_Latn.yaml
+|       |       belebele_lvs_Latn.yaml
+|       |       belebele_mal_Mlym.yaml
+|       |       belebele_mar_Deva.yaml
+|       |       belebele_mkd_Cyrl.yaml
+|       |       belebele_mlt_Latn.yaml
+|       |       belebele_mri_Latn.yaml
+|       |       belebele_mya_Mymr.yaml
+|       |       belebele_nld_Latn.yaml
+|       |       belebele_nob_Latn.yaml
+|       |       belebele_npi_Deva.yaml
+|       |       belebele_npi_Latn.yaml
+|       |       belebele_nso_Latn.yaml
+|       |       belebele_nya_Latn.yaml
+|       |       belebele_ory_Orya.yaml
+|       |       belebele_pan_Guru.yaml
+|       |       belebele_pbt_Arab.yaml
+|       |       belebele_pes_Arab.yaml
+|       |       belebele_plt_Latn.yaml
+|       |       belebele_pol_Latn.yaml
+|       |       belebele_por_Latn.yaml
+|       |       belebele_ron_Latn.yaml
+|       |       belebele_rus_Cyrl.yaml
+|       |       belebele_shn_Mymr.yaml
+|       |       belebele_sin_Latn.yaml
+|       |       belebele_sin_Sinh.yaml
+|       |       belebele_slk_Latn.yaml
+|       |       belebele_slv_Latn.yaml
+|       |       belebele_sna_Latn.yaml
+|       |       belebele_snd_Arab.yaml
+|       |       belebele_som_Latn.yaml
+|       |       belebele_sot_Latn.yaml
+|       |       belebele_spa_Latn.yaml
+|       |       belebele_srp_Cyrl.yaml
+|       |       belebele_ssw_Latn.yaml
+|       |       belebele_sun_Latn.yaml
+|       |       belebele_swe_Latn.yaml
+|       |       belebele_swh_Latn.yaml
+|       |       belebele_tam_Taml.yaml
+|       |       belebele_tel_Telu.yaml
+|       |       belebele_tgk_Cyrl.yaml
+|       |       belebele_tgl_Latn.yaml
+|       |       belebele_tha_Thai.yaml
+|       |       belebele_tir_Ethi.yaml
+|       |       belebele_tsn_Latn.yaml
+|       |       belebele_tso_Latn.yaml
+|       |       belebele_tur_Latn.yaml
+|       |       belebele_ukr_Cyrl.yaml
+|       |       belebele_urd_Arab.yaml
+|       |       belebele_urd_Latn.yaml
+|       |       belebele_uzn_Latn.yaml
+|       |       belebele_vie_Latn.yaml
+|       |       belebele_war_Latn.yaml
+|       |       belebele_wol_Latn.yaml
+|       |       belebele_xho_Latn.yaml
+|       |       belebele_yor_Latn.yaml
+|       |       belebele_zho_Hans.yaml
+|       |       belebele_zho_Hant.yaml
+|       |       belebele_zsm_Latn.yaml
+|       |       belebele_zul_Latn.yaml
+|       |       README.md
+|       |       _belebele.yaml
+|       |       _default_template_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---benchmarks
+|       |   |   minerva_math.yaml
+|       |   |   openllm.yaml
+|       |   |   pythia.yaml
+|       |   |   t0_eval.yaml
+|       |   |   
+|       |   +---flan
+|       |   |       flan_held_in.yaml
+|       |   |       flan_held_out.yaml
+|       |   |       _held_in_template_yaml
+|       |   |       
+|       |   \---multimedqa
+|       |           multimedqa.yaml
+|       |           README.md
+|       |           
+|       +---bertaqa
+|       |       bertaqa_en.yaml
+|       |       bertaqa_en_mt_gemma-7b.yaml
+|       |       bertaqa_en_mt_hitz.yaml
+|       |       bertaqa_en_mt_itzuli.yaml
+|       |       bertaqa_en_mt_latxa-13b-v1.1.yaml
+|       |       bertaqa_en_mt_latxa-13b-v1.yaml
+|       |       bertaqa_en_mt_latxa-70b-v1.1.yaml
+|       |       bertaqa_en_mt_latxa-70b-v1.yaml
+|       |       bertaqa_en_mt_latxa-7b-v1.1.yaml
+|       |       bertaqa_en_mt_latxa-7b-v1.yaml
+|       |       bertaqa_en_mt_llama-2-13b.yaml
+|       |       bertaqa_en_mt_llama-2-70b.yaml
+|       |       bertaqa_en_mt_llama-2-7b.yaml
+|       |       bertaqa_en_mt_madlad.yaml
+|       |       bertaqa_en_mt_nllb.yaml
+|       |       bertaqa_eu.yaml
+|       |       README.md
+|       |       _bertaqa_template
+|       |       
+|       +---bigbench
+|       |   |   generate_tasks.py
+|       |   |   generate_until_template_yaml
+|       |   |   multiple_choice_template_a_yaml
+|       |   |   multiple_choice_template_b_yaml
+|       |   |   push_bigbench_dataset.py
+|       |   |   README.md
+|       |   |   
+|       |   +---generate_until
+|       |   |       abstract_narrative_understanding.yaml
+|       |   |       anachronisms.yaml
+|       |   |       analogical_similarity.yaml
+|       |   |       analytic_entailment.yaml
+|       |   |       arithmetic.yaml
+|       |   |       ascii_word_recognition.yaml
+|       |   |       authorship_verification.yaml
+|       |   |       auto_categorization.yaml
+|       |   |       auto_debugging.yaml
+|       |   |       bbq_lite_json.yaml
+|       |   |       bridging_anaphora_resolution_barqa.yaml
+|       |   |       causal_judgment.yaml
+|       |   |       cause_and_effect.yaml
+|       |   |       checkmate_in_one.yaml
+|       |   |       chess_state_tracking.yaml
+|       |   |       chinese_remainder_theorem.yaml
+|       |   |       cifar10_classification.yaml
+|       |   |       codenames.yaml
+|       |   |       code_line_description.yaml
+|       |   |       color.yaml
+|       |   |       common_morpheme.yaml
+|       |   |       conceptual_combinations.yaml
+|       |   |       conlang_translation.yaml
+|       |   |       contextual_parametric_knowledge_conflicts.yaml
+|       |   |       crash_blossom.yaml
+|       |   |       crass_ai.yaml
+|       |   |       cryobiology_spanish.yaml
+|       |   |       cryptonite.yaml
+|       |   |       cs_algorithms.yaml
+|       |   |       dark_humor_detection.yaml
+|       |   |       date_understanding.yaml
+|       |   |       disambiguation_qa.yaml
+|       |   |       discourse_marker_prediction.yaml
+|       |   |       disfl_qa.yaml
+|       |   |       dyck_languages.yaml
+|       |   |       elementary_math_qa.yaml
+|       |   |       emojis_emotion_prediction.yaml
+|       |   |       emoji_movie.yaml
+|       |   |       empirical_judgments.yaml
+|       |   |       english_proverbs.yaml
+|       |   |       english_russian_proverbs.yaml
+|       |   |       entailed_polarity.yaml
+|       |   |       entailed_polarity_hindi.yaml
+|       |   |       epistemic_reasoning.yaml
+|       |   |       evaluating_information_essentiality.yaml
+|       |   |       fact_checker.yaml
+|       |   |       fantasy_reasoning.yaml
+|       |   |       few_shot_nlg.yaml
+|       |   |       figure_of_speech_detection.yaml
+|       |   |       formal_fallacies_syllogisms_negation.yaml
+|       |   |       gem.yaml
+|       |   |       gender_inclusive_sentences_german.yaml
+|       |   |       general_knowledge.yaml
+|       |   |       geometric_shapes.yaml
+|       |   |       goal_step_wikihow.yaml
+|       |   |       gre_reading_comprehension.yaml
+|       |   |       hhh_alignment.yaml
+|       |   |       hindi_question_answering.yaml
+|       |   |       hindu_knowledge.yaml
+|       |   |       hinglish_toxicity.yaml
+|       |   |       human_organs_senses.yaml
+|       |   |       hyperbaton.yaml
+|       |   |       identify_math_theorems.yaml
+|       |   |       identify_odd_metaphor.yaml
+|       |   |       implicatures.yaml
+|       |   |       implicit_relations.yaml
+|       |   |       intent_recognition.yaml
+|       |   |       international_phonetic_alphabet_nli.yaml
+|       |   |       international_phonetic_alphabet_transliterate.yaml
+|       |   |       intersect_geometry.yaml
+|       |   |       irony_identification.yaml
+|       |   |       kanji_ascii.yaml
+|       |   |       kannada.yaml
+|       |   |       key_value_maps.yaml
+|       |   |       known_unknowns.yaml
+|       |   |       language_games.yaml
+|       |   |       language_identification.yaml
+|       |   |       linguistics_puzzles.yaml
+|       |   |       linguistic_mappings.yaml
+|       |   |       list_functions.yaml
+|       |   |       logical_args.yaml
+|       |   |       logical_deduction.yaml
+|       |   |       logical_fallacy_detection.yaml
+|       |   |       logical_sequence.yaml
+|       |   |       logic_grid_puzzle.yaml
+|       |   |       mathematical_induction.yaml
+|       |   |       matrixshapes.yaml
+|       |   |       metaphor_boolean.yaml
+|       |   |       metaphor_understanding.yaml
+|       |   |       minute_mysteries_qa.yaml
+|       |   |       misconceptions.yaml
+|       |   |       misconceptions_russian.yaml
+|       |   |       mnist_ascii.yaml
+|       |   |       modified_arithmetic.yaml
+|       |   |       moral_permissibility.yaml
+|       |   |       movie_dialog_same_or_different.yaml
+|       |   |       movie_recommendation.yaml
+|       |   |       multiemo.yaml
+|       |   |       mult_data_wrangling.yaml
+|       |   |       natural_instructions.yaml
+|       |   |       navigate.yaml
+|       |   |       nonsense_words_grammar.yaml
+|       |   |       novel_concepts.yaml
+|       |   |       object_counting.yaml
+|       |   |       odd_one_out.yaml
+|       |   |       operators.yaml
+|       |   |       paragraph_segmentation.yaml
+|       |   |       parsinlu_qa.yaml
+|       |   |       parsinlu_reading_comprehension.yaml
+|       |   |       penguins_in_a_table.yaml
+|       |   |       periodic_elements.yaml
+|       |   |       persian_idioms.yaml
+|       |   |       phrase_relatedness.yaml
+|       |   |       physical_intuition.yaml
+|       |   |       physics.yaml
+|       |   |       physics_questions.yaml
+|       |   |       play_dialog_same_or_different.yaml
+|       |   |       polish_sequence_labeling.yaml
+|       |   |       presuppositions_as_nli.yaml
+|       |   |       qa_wikidata.yaml
+|       |   |       question_selection.yaml
+|       |   |       real_or_fake_text.yaml
+|       |   |       reasoning_about_colored_objects.yaml
+|       |   |       repeat_copy_logic.yaml
+|       |   |       rephrase.yaml
+|       |   |       riddle_sense.yaml
+|       |   |       ruin_names.yaml
+|       |   |       salient_translation_error_detection.yaml
+|       |   |       scientific_press_release.yaml
+|       |   |       semantic_parsing_in_context_sparc.yaml
+|       |   |       semantic_parsing_spider.yaml
+|       |   |       sentence_ambiguity.yaml
+|       |   |       similarities_abstraction.yaml
+|       |   |       simple_arithmetic_json.yaml
+|       |   |       simple_arithmetic_json_multiple_choice.yaml
+|       |   |       simple_arithmetic_json_subtasks.yaml
+|       |   |       simple_arithmetic_multiple_targets_json.yaml
+|       |   |       simple_ethical_questions.yaml
+|       |   |       simple_text_editing.yaml
+|       |   |       simp_turing_concept.yaml
+|       |   |       snarks.yaml
+|       |   |       social_iqa.yaml
+|       |   |       social_support.yaml
+|       |   |       sports_understanding.yaml
+|       |   |       strange_stories.yaml
+|       |   |       strategyqa.yaml
+|       |   |       sufficient_information.yaml
+|       |   |       suicide_risk.yaml
+|       |   |       swahili_english_proverbs.yaml
+|       |   |       swedish_to_german_proverbs.yaml
+|       |   |       symbol_interpretation.yaml
+|       |   |       temporal_sequences.yaml
+|       |   |       tense.yaml
+|       |   |       timedial.yaml
+|       |   |       topical_chat.yaml
+|       |   |       tracking_shuffled_objects.yaml
+|       |   |       understanding_fables.yaml
+|       |   |       undo_permutation.yaml
+|       |   |       unit_conversion.yaml
+|       |   |       unit_interpretation.yaml
+|       |   |       unnatural_in_context_learning.yaml
+|       |   |       vitaminc_fact_verification.yaml
+|       |   |       what_is_the_tao.yaml
+|       |   |       which_wiki_edit.yaml
+|       |   |       winowhy.yaml
+|       |   |       word_sorting.yaml
+|       |   |       word_unscrambling.yaml
+|       |   |       
+|       |   \---multiple_choice
+|       |           abstract_narrative_understanding.yaml
+|       |           anachronisms.yaml
+|       |           analogical_similarity.yaml
+|       |           analytic_entailment.yaml
+|       |           arithmetic.yaml
+|       |           authorship_verification.yaml
+|       |           bbq_lite_json.yaml
+|       |           causal_judgment.yaml
+|       |           cause_and_effect.yaml
+|       |           checkmate_in_one.yaml
+|       |           cifar10_classification.yaml
+|       |           code_line_description.yaml
+|       |           color.yaml
+|       |           common_morpheme.yaml
+|       |           conceptual_combinations.yaml
+|       |           contextual_parametric_knowledge_conflicts.yaml
+|       |           crash_blossom.yaml
+|       |           crass_ai.yaml
+|       |           cryobiology_spanish.yaml
+|       |           cs_algorithms.yaml
+|       |           dark_humor_detection.yaml
+|       |           date_understanding.yaml
+|       |           disambiguation_qa.yaml
+|       |           discourse_marker_prediction.yaml
+|       |           dyck_languages.yaml
+|       |           elementary_math_qa.yaml
+|       |           emojis_emotion_prediction.yaml
+|       |           emoji_movie.yaml
+|       |           empirical_judgments.yaml
+|       |           english_proverbs.yaml
+|       |           english_russian_proverbs.yaml
+|       |           entailed_polarity.yaml
+|       |           entailed_polarity_hindi.yaml
+|       |           epistemic_reasoning.yaml
+|       |           evaluating_information_essentiality.yaml
+|       |           fact_checker.yaml
+|       |           fantasy_reasoning.yaml
+|       |           figure_of_speech_detection.yaml
+|       |           formal_fallacies_syllogisms_negation.yaml
+|       |           general_knowledge.yaml
+|       |           geometric_shapes.yaml
+|       |           goal_step_wikihow.yaml
+|       |           gre_reading_comprehension.yaml
+|       |           hhh_alignment.yaml
+|       |           hindu_knowledge.yaml
+|       |           hinglish_toxicity.yaml
+|       |           human_organs_senses.yaml
+|       |           hyperbaton.yaml
+|       |           identify_math_theorems.yaml
+|       |           identify_odd_metaphor.yaml
+|       |           implicatures.yaml
+|       |           implicit_relations.yaml
+|       |           intent_recognition.yaml
+|       |           international_phonetic_alphabet_nli.yaml
+|       |           intersect_geometry.yaml
+|       |           irony_identification.yaml
+|       |           kanji_ascii.yaml
+|       |           kannada.yaml
+|       |           key_value_maps.yaml
+|       |           known_unknowns.yaml
+|       |           language_identification.yaml
+|       |           logical_args.yaml
+|       |           logical_deduction.yaml
+|       |           logical_fallacy_detection.yaml
+|       |           logical_sequence.yaml
+|       |           logic_grid_puzzle.yaml
+|       |           mathematical_induction.yaml
+|       |           metaphor_boolean.yaml
+|       |           metaphor_understanding.yaml
+|       |           misconceptions.yaml
+|       |           misconceptions_russian.yaml
+|       |           mnist_ascii.yaml
+|       |           moral_permissibility.yaml
+|       |           movie_dialog_same_or_different.yaml
+|       |           movie_recommendation.yaml
+|       |           multiemo.yaml
+|       |           navigate.yaml
+|       |           nonsense_words_grammar.yaml
+|       |           novel_concepts.yaml
+|       |           odd_one_out.yaml
+|       |           parsinlu_qa.yaml
+|       |           penguins_in_a_table.yaml
+|       |           periodic_elements.yaml
+|       |           persian_idioms.yaml
+|       |           phrase_relatedness.yaml
+|       |           physical_intuition.yaml
+|       |           physics.yaml
+|       |           play_dialog_same_or_different.yaml
+|       |           presuppositions_as_nli.yaml
+|       |           question_selection.yaml
+|       |           real_or_fake_text.yaml
+|       |           reasoning_about_colored_objects.yaml
+|       |           riddle_sense.yaml
+|       |           ruin_names.yaml
+|       |           salient_translation_error_detection.yaml
+|       |           sentence_ambiguity.yaml
+|       |           similarities_abstraction.yaml
+|       |           simple_ethical_questions.yaml
+|       |           snarks.yaml
+|       |           social_iqa.yaml
+|       |           social_support.yaml
+|       |           sports_understanding.yaml
+|       |           strange_stories.yaml
+|       |           strategyqa.yaml
+|       |           suicide_risk.yaml
+|       |           swahili_english_proverbs.yaml
+|       |           swedish_to_german_proverbs.yaml
+|       |           symbol_interpretation.yaml
+|       |           temporal_sequences.yaml
+|       |           timedial.yaml
+|       |           tracking_shuffled_objects.yaml
+|       |           understanding_fables.yaml
+|       |           undo_permutation.yaml
+|       |           unit_conversion.yaml
+|       |           unit_interpretation.yaml
+|       |           vitaminc_fact_verification.yaml
+|       |           what_is_the_tao.yaml
+|       |           which_wiki_edit.yaml
+|       |           winowhy.yaml
+|       |           
+|       +---blimp
+|       |       adjunct_island.yaml
+|       |       anaphor_gender_agreement.yaml
+|       |       anaphor_number_agreement.yaml
+|       |       animate_subject_passive.yaml
+|       |       animate_subject_trans.yaml
+|       |       causative.yaml
+|       |       complex_NP_island.yaml
+|       |       coordinate_structure_constraint_complex_left_branch.yaml
+|       |       coordinate_structure_constraint_object_extraction.yaml
+|       |       determiner_noun_agreement_1.yaml
+|       |       determiner_noun_agreement_2.yaml
+|       |       determiner_noun_agreement_irregular_1.yaml
+|       |       determiner_noun_agreement_irregular_2.yaml
+|       |       determiner_noun_agreement_with_adjective_1.yaml
+|       |       determiner_noun_agreement_with_adj_2.yaml
+|       |       determiner_noun_agreement_with_adj_irregular_1.yaml
+|       |       determiner_noun_agreement_with_adj_irregular_2.yaml
+|       |       distractor_agreement_relational_noun.yaml
+|       |       distractor_agreement_relative_clause.yaml
+|       |       drop_argument.yaml
+|       |       ellipsis_n_bar_1.yaml
+|       |       ellipsis_n_bar_2.yaml
+|       |       existential_there_object_raising.yaml
+|       |       existential_there_quantifiers_1.yaml
+|       |       existential_there_quantifiers_2.yaml
+|       |       existential_there_subject_raising.yaml
+|       |       expletive_it_object_raising.yaml
+|       |       generate_configs.py
+|       |       inchoative.yaml
+|       |       intransitive.yaml
+|       |       irregular_past_participle_adjectives.yaml
+|       |       irregular_past_participle_verbs.yaml
+|       |       irregular_plural_subject_verb_agreement_1.yaml
+|       |       irregular_plural_subject_verb_agreement_2.yaml
+|       |       left_branch_island_echo_question.yaml
+|       |       left_branch_island_simple_question.yaml
+|       |       matrix_question_npi_licensor_present.yaml
+|       |       npi_present_1.yaml
+|       |       npi_present_2.yaml
+|       |       only_npi_licensor_present.yaml
+|       |       only_npi_scope.yaml
+|       |       passive_1.yaml
+|       |       passive_2.yaml
+|       |       principle_A_case_1.yaml
+|       |       principle_A_case_2.yaml
+|       |       principle_A_c_command.yaml
+|       |       principle_A_domain_1.yaml
+|       |       principle_A_domain_2.yaml
+|       |       principle_A_domain_3.yaml
+|       |       principle_A_reconstruction.yaml
+|       |       README.md
+|       |       regular_plural_subject_verb_agreement_1.yaml
+|       |       regular_plural_subject_verb_agreement_2.yaml
+|       |       sentential_negation_npi_licensor_present.yaml
+|       |       sentential_negation_npi_scope.yaml
+|       |       sentential_subject_island.yaml
+|       |       superlative_quantifiers_1.yaml
+|       |       superlative_quantifiers_2.yaml
+|       |       tough_vs_raising_1.yaml
+|       |       tough_vs_raising_2.yaml
+|       |       transitive.yaml
+|       |       wh_island.yaml
+|       |       wh_questions_object_gap.yaml
+|       |       wh_questions_subject_gap.yaml
+|       |       wh_questions_subject_gap_long_distance.yaml
+|       |       wh_vs_that_no_gap.yaml
+|       |       wh_vs_that_no_gap_long_distance.yaml
+|       |       wh_vs_that_with_gap.yaml
+|       |       wh_vs_that_with_gap_long_distance.yaml
+|       |       _blimp.yaml
+|       |       _template_yaml
+|       |       
+|       +---catalan_bench
+|       |   |   arc_ca_challenge.yaml
+|       |   |   arc_ca_easy.yaml
+|       |   |   cabreu_abstractive.yaml
+|       |   |   cabreu_extractive.yaml
+|       |   |   cabreu_extreme.yaml
+|       |   |   catalanqa.yaml
+|       |   |   catalan_bench.yaml
+|       |   |   catcola.yaml
+|       |   |   copa_ca.yaml
+|       |   |   coqcat.yaml
+|       |   |   mgsm_direct_ca.yaml
+|       |   |   openbookqa_ca.yaml
+|       |   |   parafraseja.yaml
+|       |   |   paws_ca.yaml
+|       |   |   piqa_ca.yaml
+|       |   |   README.md
+|       |   |   siqa_ca.yaml
+|       |   |   teca.yaml
+|       |   |   utils.py
+|       |   |   wnli_ca.yaml
+|       |   |   xnli_ca.yaml
+|       |   |   xquad_ca.yaml
+|       |   |   xstorycloze_ca.yaml
+|       |   |   _arc_ca_common_yaml
+|       |   |   _cabreu_common_yaml
+|       |   |   
+|       |   +---flores_ca
+|       |   |       create_yamls_flores_ca.py
+|       |   |       flores_ca-de.yaml
+|       |   |       flores_ca-en.yaml
+|       |   |       flores_ca-es.yaml
+|       |   |       flores_ca-eu.yaml
+|       |   |       flores_ca-fr.yaml
+|       |   |       flores_ca-gl.yaml
+|       |   |       flores_ca-it.yaml
+|       |   |       flores_ca-pt.yaml
+|       |   |       flores_ca.yaml
+|       |   |       flores_de-ca.yaml
+|       |   |       flores_en-ca.yaml
+|       |   |       flores_es-ca.yaml
+|       |   |       flores_eu-ca.yaml
+|       |   |       flores_fr-ca.yaml
+|       |   |       flores_gl-ca.yaml
+|       |   |       flores_it-ca.yaml
+|       |   |       flores_pt-ca.yaml
+|       |   |       _flores_common_yaml
+|       |   |       
+|       |   \---phrases_va
+|       |           phrases_ca-va.yaml
+|       |           phrases_va-ca.yaml
+|       |           _phrases_va_common.yaml
+|       |           
+|       +---ceval
+|       |       ceval-valid_accountant.yaml
+|       |       ceval-valid_advanced_mathematics.yaml
+|       |       ceval-valid_art_studies.yaml
+|       |       ceval-valid_basic_medicine.yaml
+|       |       ceval-valid_business_administration.yaml
+|       |       ceval-valid_chinese_language_and_literature.yaml
+|       |       ceval-valid_civil_servant.yaml
+|       |       ceval-valid_clinical_medicine.yaml
+|       |       ceval-valid_college_chemistry.yaml
+|       |       ceval-valid_college_economics.yaml
+|       |       ceval-valid_college_physics.yaml
+|       |       ceval-valid_college_programming.yaml
+|       |       ceval-valid_computer_architecture.yaml
+|       |       ceval-valid_computer_network.yaml
+|       |       ceval-valid_discrete_mathematics.yaml
+|       |       ceval-valid_education_science.yaml
+|       |       ceval-valid_electrical_engineer.yaml
+|       |       ceval-valid_environmental_impact_assessment_engineer.yaml
+|       |       ceval-valid_fire_engineer.yaml
+|       |       ceval-valid_high_school_biology.yaml
+|       |       ceval-valid_high_school_chemistry.yaml
+|       |       ceval-valid_high_school_chinese.yaml
+|       |       ceval-valid_high_school_geography.yaml
+|       |       ceval-valid_high_school_history.yaml
+|       |       ceval-valid_high_school_mathematics.yaml
+|       |       ceval-valid_high_school_physics.yaml
+|       |       ceval-valid_high_school_politics.yaml
+|       |       ceval-valid_ideological_and_moral_cultivation.yaml
+|       |       ceval-valid_law.yaml
+|       |       ceval-valid_legal_professional.yaml
+|       |       ceval-valid_logic.yaml
+|       |       ceval-valid_mao_zedong_thought.yaml
+|       |       ceval-valid_marxism.yaml
+|       |       ceval-valid_metrology_engineer.yaml
+|       |       ceval-valid_middle_school_biology.yaml
+|       |       ceval-valid_middle_school_chemistry.yaml
+|       |       ceval-valid_middle_school_geography.yaml
+|       |       ceval-valid_middle_school_history.yaml
+|       |       ceval-valid_middle_school_mathematics.yaml
+|       |       ceval-valid_middle_school_physics.yaml
+|       |       ceval-valid_middle_school_politics.yaml
+|       |       ceval-valid_modern_chinese_history.yaml
+|       |       ceval-valid_operating_system.yaml
+|       |       ceval-valid_physician.yaml
+|       |       ceval-valid_plant_protection.yaml
+|       |       ceval-valid_probability_and_statistics.yaml
+|       |       ceval-valid_professional_tour_guide.yaml
+|       |       ceval-valid_sports_science.yaml
+|       |       ceval-valid_tax_accountant.yaml
+|       |       ceval-valid_teacher_qualification.yaml
+|       |       ceval-valid_urban_and_rural_planner.yaml
+|       |       ceval-valid_veterinary_medicine.yaml
+|       |       README.md
+|       |       _ceval-valid.yaml
+|       |       _default_ceval_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---cmmlu
+|       |       cmmlu_agronomy.yaml
+|       |       cmmlu_anatomy.yaml
+|       |       cmmlu_ancient_chinese.yaml
+|       |       cmmlu_arts.yaml
+|       |       cmmlu_astronomy.yaml
+|       |       cmmlu_business_ethics.yaml
+|       |       cmmlu_chinese_civil_service_exam.yaml
+|       |       cmmlu_chinese_driving_rule.yaml
+|       |       cmmlu_chinese_food_culture.yaml
+|       |       cmmlu_chinese_foreign_policy.yaml
+|       |       cmmlu_chinese_history.yaml
+|       |       cmmlu_chinese_literature.yaml
+|       |       cmmlu_chinese_teacher_qualification.yaml
+|       |       cmmlu_clinical_knowledge.yaml
+|       |       cmmlu_college_actuarial_science.yaml
+|       |       cmmlu_college_education.yaml
+|       |       cmmlu_college_engineering_hydrology.yaml
+|       |       cmmlu_college_law.yaml
+|       |       cmmlu_college_mathematics.yaml
+|       |       cmmlu_college_medical_statistics.yaml
+|       |       cmmlu_college_medicine.yaml
+|       |       cmmlu_computer_science.yaml
+|       |       cmmlu_computer_security.yaml
+|       |       cmmlu_conceptual_physics.yaml
+|       |       cmmlu_construction_project_management.yaml
+|       |       cmmlu_default_agronomy.yaml
+|       |       cmmlu_default_anatomy.yaml
+|       |       cmmlu_default_ancient_chinese.yaml
+|       |       cmmlu_default_arts.yaml
+|       |       cmmlu_default_astronomy.yaml
+|       |       cmmlu_default_business_ethics.yaml
+|       |       cmmlu_default_chinese_civil_service_exam.yaml
+|       |       cmmlu_default_chinese_driving_rule.yaml
+|       |       cmmlu_default_chinese_food_culture.yaml
+|       |       cmmlu_default_chinese_foreign_policy.yaml
+|       |       cmmlu_default_chinese_history.yaml
+|       |       cmmlu_default_chinese_literature.yaml
+|       |       cmmlu_default_chinese_teacher_qualification.yaml
+|       |       cmmlu_default_clinical_knowledge.yaml
+|       |       cmmlu_default_college_actuarial_science.yaml
+|       |       cmmlu_default_college_education.yaml
+|       |       cmmlu_default_college_engineering_hydrology.yaml
+|       |       cmmlu_default_college_law.yaml
+|       |       cmmlu_default_college_mathematics.yaml
+|       |       cmmlu_default_college_medical_statistics.yaml
+|       |       cmmlu_default_college_medicine.yaml
+|       |       cmmlu_default_computer_science.yaml
+|       |       cmmlu_default_computer_security.yaml
+|       |       cmmlu_default_conceptual_physics.yaml
+|       |       cmmlu_default_construction_project_management.yaml
+|       |       cmmlu_default_economics.yaml
+|       |       cmmlu_default_education.yaml
+|       |       cmmlu_default_electrical_engineering.yaml
+|       |       cmmlu_default_elementary_chinese.yaml
+|       |       cmmlu_default_elementary_commonsense.yaml
+|       |       cmmlu_default_elementary_information_and_technology.yaml
+|       |       cmmlu_default_elementary_mathematics.yaml
+|       |       cmmlu_default_ethnology.yaml
+|       |       cmmlu_default_food_science.yaml
+|       |       cmmlu_default_genetics.yaml
+|       |       cmmlu_default_global_facts.yaml
+|       |       cmmlu_default_high_school_biology.yaml
+|       |       cmmlu_default_high_school_chemistry.yaml
+|       |       cmmlu_default_high_school_geography.yaml
+|       |       cmmlu_default_high_school_mathematics.yaml
+|       |       cmmlu_default_high_school_physics.yaml
+|       |       cmmlu_default_high_school_politics.yaml
+|       |       cmmlu_default_human_sexuality.yaml
+|       |       cmmlu_default_international_law.yaml
+|       |       cmmlu_default_journalism.yaml
+|       |       cmmlu_default_jurisprudence.yaml
+|       |       cmmlu_default_legal_and_moral_basis.yaml
+|       |       cmmlu_default_logical.yaml
+|       |       cmmlu_default_machine_learning.yaml
+|       |       cmmlu_default_management.yaml
+|       |       cmmlu_default_marketing.yaml
+|       |       cmmlu_default_marxist_theory.yaml
+|       |       cmmlu_default_modern_chinese.yaml
+|       |       cmmlu_default_nutrition.yaml
+|       |       cmmlu_default_philosophy.yaml
+|       |       cmmlu_default_professional_accounting.yaml
+|       |       cmmlu_default_professional_law.yaml
+|       |       cmmlu_default_professional_medicine.yaml
+|       |       cmmlu_default_professional_psychology.yaml
+|       |       cmmlu_default_public_relations.yaml
+|       |       cmmlu_default_security_study.yaml
+|       |       cmmlu_default_sociology.yaml
+|       |       cmmlu_default_sports_science.yaml
+|       |       cmmlu_default_traditional_chinese_medicine.yaml
+|       |       cmmlu_default_virology.yaml
+|       |       cmmlu_default_world_history.yaml
+|       |       cmmlu_default_world_religions.yaml
+|       |       cmmlu_economics.yaml
+|       |       cmmlu_education.yaml
+|       |       cmmlu_electrical_engineering.yaml
+|       |       cmmlu_elementary_chinese.yaml
+|       |       cmmlu_elementary_commonsense.yaml
+|       |       cmmlu_elementary_information_and_technology.yaml
+|       |       cmmlu_elementary_mathematics.yaml
+|       |       cmmlu_ethnology.yaml
+|       |       cmmlu_food_science.yaml
+|       |       cmmlu_genetics.yaml
+|       |       cmmlu_global_facts.yaml
+|       |       cmmlu_high_school_biology.yaml
+|       |       cmmlu_high_school_chemistry.yaml
+|       |       cmmlu_high_school_geography.yaml
+|       |       cmmlu_high_school_mathematics.yaml
+|       |       cmmlu_high_school_physics.yaml
+|       |       cmmlu_high_school_politics.yaml
+|       |       cmmlu_human_sexuality.yaml
+|       |       cmmlu_international_law.yaml
+|       |       cmmlu_journalism.yaml
+|       |       cmmlu_jurisprudence.yaml
+|       |       cmmlu_legal_and_moral_basis.yaml
+|       |       cmmlu_logical.yaml
+|       |       cmmlu_machine_learning.yaml
+|       |       cmmlu_management.yaml
+|       |       cmmlu_marketing.yaml
+|       |       cmmlu_marxist_theory.yaml
+|       |       cmmlu_modern_chinese.yaml
+|       |       cmmlu_nutrition.yaml
+|       |       cmmlu_philosophy.yaml
+|       |       cmmlu_professional_accounting.yaml
+|       |       cmmlu_professional_law.yaml
+|       |       cmmlu_professional_medicine.yaml
+|       |       cmmlu_professional_psychology.yaml
+|       |       cmmlu_public_relations.yaml
+|       |       cmmlu_security_study.yaml
+|       |       cmmlu_sociology.yaml
+|       |       cmmlu_sports_science.yaml
+|       |       cmmlu_traditional_chinese_medicine.yaml
+|       |       cmmlu_virology.yaml
+|       |       cmmlu_world_history.yaml
+|       |       cmmlu_world_religions.yaml
+|       |       README.md
+|       |       _cmmlu.yaml
+|       |       _default_template_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---code_x_glue
+|       |   \---code-text
+|       |           bleu.py
+|       |           go.yaml
+|       |           java.yaml
+|       |           javascript.yaml
+|       |           php.yaml
+|       |           python.yaml
+|       |           ruby.yaml
+|       |           utils.py
+|       |           
+|       +---commonsense_qa
+|       |       commonsense_qa_fewshot.yaml
+|       |       default.yaml
+|       |       README.md
+|       |       
+|       +---copal_id
+|       |       colloquial.yaml
+|       |       README.md
+|       |       standard.yaml
+|       |       utils.py
+|       |       
+|       +---coqa
+|       |       default.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---crows_pairs
+|       |       crows_pairs_english.yaml
+|       |       crows_pairs_english_age.yaml
+|       |       crows_pairs_english_autre.yaml
+|       |       crows_pairs_english_disability.yaml
+|       |       crows_pairs_english_gender.yaml
+|       |       crows_pairs_english_nationality.yaml
+|       |       crows_pairs_english_physical_appearance.yaml
+|       |       crows_pairs_english_race_color.yaml
+|       |       crows_pairs_english_religion.yaml
+|       |       crows_pairs_english_sexual_orientation.yaml
+|       |       crows_pairs_english_socioeconomic.yaml
+|       |       crows_pairs_french.yaml
+|       |       crows_pairs_french_age.yaml
+|       |       crows_pairs_french_autre.yaml
+|       |       crows_pairs_french_disability.yaml
+|       |       crows_pairs_french_gender.yaml
+|       |       crows_pairs_french_nationality.yaml
+|       |       crows_pairs_french_physical_appearance.yaml
+|       |       crows_pairs_french_race_color.yaml
+|       |       crows_pairs_french_religion.yaml
+|       |       crows_pairs_french_sexual_orientation.yaml
+|       |       crows_pairs_french_socioeconomic.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---csatqa
+|       |       csatqa_gr.yaml
+|       |       csatqa_li.yaml
+|       |       csatqa_rch.yaml
+|       |       csatqa_rcs.yaml
+|       |       csatqa_rcss.yaml
+|       |       csatqa_wr.yaml
+|       |       utils.py
+|       |       _csatqa.yaml
+|       |       _default_csatqa_yaml
+|       |       _generate_configs.py
+|       |       
+|       +---drop
+|       |       default.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---eq_bench
+|       |       default.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---eus_exams
+|       |       configs.py
+|       |       eus_exams
+|       |       eus_exams_es
+|       |       eus_exams_es_ejadministrativo.yaml
+|       |       eus_exams_es_ejauxiliar.yaml
+|       |       eus_exams_es_ejsubalterno.yaml
+|       |       eus_exams_es_ejtecnico.yaml
+|       |       eus_exams_es_opeayuntamientovitoria.yaml
+|       |       eus_exams_es_opebilbao.yaml
+|       |       eus_exams_es_opeehuadmin.yaml
+|       |       eus_exams_es_opeehuaux.yaml
+|       |       eus_exams_es_opeehubiblio.yaml
+|       |       eus_exams_es_opeehuderecho.yaml
+|       |       eus_exams_es_opeehueconomicas.yaml
+|       |       eus_exams_es_opeehuempresariales.yaml
+|       |       eus_exams_es_opeehusubalterno.yaml
+|       |       eus_exams_es_opeehutecnico.yaml
+|       |       eus_exams_es_opeehutecnicob.yaml
+|       |       eus_exams_es_opeosakiadmin.yaml
+|       |       eus_exams_es_opeosakiaux.yaml
+|       |       eus_exams_es_opeosakiauxenf.yaml
+|       |       eus_exams_es_opeosakicelador.yaml
+|       |       eus_exams_es_opeosakienf.yaml
+|       |       eus_exams_es_opeosakijuridico.yaml
+|       |       eus_exams_es_opeosakioperario.yaml
+|       |       eus_exams_es_opeosakitecnico.yaml
+|       |       eus_exams_es_opeosakivarios.yaml
+|       |       eus_exams_es_osakidetza1c.yaml
+|       |       eus_exams_es_osakidetza2c.yaml
+|       |       eus_exams_es_osakidetza3c.yaml
+|       |       eus_exams_es_osakidetza4c.yaml
+|       |       eus_exams_es_osakidetza5c.yaml
+|       |       eus_exams_es_osakidetza6c.yaml
+|       |       eus_exams_es_osakidetza7c.yaml
+|       |       eus_exams_es_osakidetza8c.yaml
+|       |       eus_exams_es_osakidetza9c.yaml
+|       |       eus_exams_eu
+|       |       eus_exams_eu_ejadministrari.yaml
+|       |       eus_exams_eu_ejlaguntza.yaml
+|       |       eus_exams_eu_ejlaguntzaile.yaml
+|       |       eus_exams_eu_ejteknikari.yaml
+|       |       eus_exams_eu_opebilbaoeu.yaml
+|       |       eus_exams_eu_opeehuadmineu.yaml
+|       |       eus_exams_eu_opeehuauxeu.yaml
+|       |       eus_exams_eu_opeehubiblioeu.yaml
+|       |       eus_exams_eu_opeehuderechoeu.yaml
+|       |       eus_exams_eu_opeehueconomicaseu.yaml
+|       |       eus_exams_eu_opeehuempresarialeseu.yaml
+|       |       eus_exams_eu_opeehusubalternoeu.yaml
+|       |       eus_exams_eu_opeehutecnicoeu.yaml
+|       |       eus_exams_eu_opeehuteknikarib.yaml
+|       |       eus_exams_eu_opegasteizkoudala.yaml
+|       |       eus_exams_eu_opeosakiadmineu.yaml
+|       |       eus_exams_eu_opeosakiauxenfeu.yaml
+|       |       eus_exams_eu_opeosakiauxeu.yaml
+|       |       eus_exams_eu_opeosakiceladoreu.yaml
+|       |       eus_exams_eu_opeosakienfeu.yaml
+|       |       eus_exams_eu_opeosakioperarioeu.yaml
+|       |       eus_exams_eu_opeosakitecnicoeu.yaml
+|       |       eus_exams_eu_opeosakivarioseu.yaml
+|       |       eus_exams_eu_osakidetza1e.yaml
+|       |       eus_exams_eu_osakidetza2e.yaml
+|       |       eus_exams_eu_osakidetza3e.yaml
+|       |       eus_exams_eu_osakidetza5e.yaml
+|       |       eus_exams_eu_osakidetza6e.yaml
+|       |       eus_exams_eu_osakidetza7e.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---eus_proficiency
+|       |       eus_proficiency.yaml
+|       |       README.md
+|       |       
+|       +---eus_reading
+|       |       eus_reading.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---eus_trivia
+|       |       eus_trivia.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---fda
+|       |       fda.yaml
+|       |       README.md
+|       |       task.py
+|       |       
+|       +---fld
+|       |       fld_default.yaml
+|       |       fld_logical_formula_default.yaml
+|       |       fld_logical_formula_star.yaml
+|       |       fld_star.yaml
+|       |       README.md
+|       |       
+|       +---french_bench
+|       |       french_bench_arc_challenge.yaml
+|       |       french_bench_boolqa.yaml
+|       |       french_bench_fquadv2.yaml
+|       |       french_bench_fquadv2_bool.yaml
+|       |       french_bench_fquadv2_genq.yaml
+|       |       french_bench_fquadv2_hasAns.yaml
+|       |       french_bench_grammar.yaml
+|       |       french_bench_hellaswag.yaml
+|       |       french_bench_multifquad.yaml
+|       |       french_bench_opus_perplexity.yaml
+|       |       french_bench_orangesum_abstract.yaml
+|       |       french_bench_orangesum_title.yaml
+|       |       french_bench_reading_comp.yaml
+|       |       french_bench_topic_based_nli.yaml
+|       |       french_bench_trivia.yaml
+|       |       french_bench_vocab.yaml
+|       |       french_bench_wikitext_fr.yaml
+|       |       french_bench_xnli.yaml
+|       |       preprocess_wikitext.py
+|       |       README.md
+|       |       utils.py
+|       |       _default_template_yaml
+|       |       
+|       +---galician_bench
+|       |   |   belebele_glg_Latn.yaml
+|       |   |   galcola.yaml
+|       |   |   galician_bench.yaml
+|       |   |   mgsm_direct_gl.yaml
+|       |   |   openbookqa_gl.yaml
+|       |   |   parafrases_gl.yaml
+|       |   |   paws_gl.yaml
+|       |   |   README.md
+|       |   |   summarization_gl.yaml
+|       |   |   truthfulqa_gl_gen.yaml
+|       |   |   truthfulqa_gl_mc1.yaml
+|       |   |   truthfulqa_gl_mc2.yaml
+|       |   |   utils.py
+|       |   |   xnli_gl.yaml
+|       |   |   xstorycloze_gl.yaml
+|       |   |   
+|       |   \---flores_gl
+|       |           create_yamls_flores_gl.py
+|       |           flores_ca-gl.yaml
+|       |           flores_de-gl.yaml
+|       |           flores_en-gl.yaml
+|       |           flores_es-gl.yaml
+|       |           flores_eu-gl.yaml
+|       |           flores_fr-gl.yaml
+|       |           flores_gl-ca.yaml
+|       |           flores_gl-de.yaml
+|       |           flores_gl-en.yaml
+|       |           flores_gl-es.yaml
+|       |           flores_gl-eu.yaml
+|       |           flores_gl-fr.yaml
+|       |           flores_gl-it.yaml
+|       |           flores_gl-pt.yaml
+|       |           flores_gl.yaml
+|       |           flores_it-gl.yaml
+|       |           flores_pt-gl.yaml
+|       |           _flores_common_yaml
+|       |           
+|       +---glianorex
+|       |       glianorex.yaml
+|       |       glianorex_en.yaml
+|       |       glianorex_fr.yaml
+|       |       preprocess_glianorex.py
+|       |       README.md
+|       |       
+|       +---glue
+|       |   |   README.md
+|       |   |   
+|       |   +---cola
+|       |   |       default.yaml
+|       |   |       
+|       |   +---mnli
+|       |   |       default.yaml
+|       |   |       mismatch.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---mrpc
+|       |   |       default.yaml
+|       |   |       
+|       |   +---qnli
+|       |   |       default.yaml
+|       |   |       
+|       |   +---qqp
+|       |   |       default.yaml
+|       |   |       
+|       |   +---rte
+|       |   |       default.yaml
+|       |   |       
+|       |   +---sst2
+|       |   |       default.yaml
+|       |   |       
+|       |   \---wnli
+|       |           default.yaml
+|       |           
+|       +---gpqa
+|       |   |   README.md
+|       |   |   
+|       |   +---cot_n_shot
+|       |   |       gpqa_diamond_cot_n_shot.yaml
+|       |   |       gpqa_extended_cot_n_shot.yaml
+|       |   |       gpqa_main_cot_n_shot.yaml
+|       |   |       utils.py
+|       |   |       _generate_configs.py
+|       |   |       _gpqa_cot_n_shot_yaml
+|       |   |       
+|       |   +---cot_zeroshot
+|       |   |       gpqa_diamond_cot_zeroshot.yaml
+|       |   |       gpqa_extended_cot_zeroshot.yaml
+|       |   |       gpqa_main_cot_zeroshot.yaml
+|       |   |       utils.py
+|       |   |       _generate_configs.py
+|       |   |       _gpqa_cot_zeroshot_yaml
+|       |   |       
+|       |   +---generative
+|       |   |       gpqa_diamond_generative_n_shot.yaml
+|       |   |       gpqa_extended_generative_n_shot.yaml
+|       |   |       gpqa_main_generative_n_shot.yaml
+|       |   |       utils.py
+|       |   |       _generate_configs.py
+|       |   |       _gpqa_generative_n_shot_yaml
+|       |   |       
+|       |   +---n_shot
+|       |   |       gpqa_diamond_n_shot.yaml
+|       |   |       gpqa_extended_n_shot.yaml
+|       |   |       gpqa_main_n_shot.yaml
+|       |   |       utils.py
+|       |   |       _generate_configs.py
+|       |   |       _gpqa_n_shot_yaml
+|       |   |       
+|       |   \---zeroshot
+|       |           gpqa_diamond_zeroshot.yaml
+|       |           gpqa_extended_zeroshot.yaml
+|       |           gpqa_main_zeroshot.yaml
+|       |           utils.py
+|       |           _generate_configs.py
+|       |           _gpqa_zeroshot_yaml
+|       |           
+|       +---gsm8k
+|       |       gsm8k-cot-llama.yaml
+|       |       gsm8k-cot-self-consistency.yaml
+|       |       gsm8k-cot-zeroshot.yaml
+|       |       gsm8k-cot.yaml
+|       |       gsm8k.yaml
+|       |       README.md
+|       |       
+|       +---gsm_plus
+|       |       gsm_plus.yaml
+|       |       gsm_plus_mini.yaml
+|       |       README.md
+|       |       
+|       +---haerae
+|       |       haerae_gk.yaml
+|       |       haerae_hi.yaml
+|       |       haerae_lw.yaml
+|       |       haerae_rw.yaml
+|       |       haerae_sn.yaml
+|       |       README.md
+|       |       _default_haerae_yaml
+|       |       _haerae.yaml
+|       |       
+|       +---headqa
+|       |       headqa_en.yaml
+|       |       headqa_es.yaml
+|       |       README.md
+|       |       
+|       +---hellaswag
+|       |       hellaswag.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---hendrycks_ethics
+|       |       commonsense.yaml
+|       |       deontology.yaml
+|       |       justice.yaml
+|       |       README.md
+|       |       utilitarianism.yaml
+|       |       utilitarianism_original_yaml
+|       |       utils.py
+|       |       virtue.yaml
+|       |       
+|       +---hendrycks_math
+|       |       hendrycks_math.yaml
+|       |       hendrycks_math_algebra.yaml
+|       |       hendrycks_math_counting_and_prob.yaml
+|       |       hendrycks_math_geometry.yaml
+|       |       hendrycks_math_intermediate_algebra.yaml
+|       |       hendrycks_math_num_theory.yaml
+|       |       hendrycks_math_prealgebra.yaml
+|       |       hendrycks_math_precalc.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---ifeval
+|       |       ifeval.yaml
+|       |       instructions.py
+|       |       instructions_registry.py
+|       |       instructions_util.py
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---inverse_scaling
+|       |       inverse_scaling_hindsight_neglect.yaml
+|       |       inverse_scaling_into_the_unknown.yaml
+|       |       inverse_scaling_memo_trap.yaml
+|       |       inverse_scaling_modus_tollens.yaml
+|       |       inverse_scaling_neqa.yaml
+|       |       inverse_scaling_pattern_matching_suppression.yaml
+|       |       inverse_scaling_quote_repetition.yaml
+|       |       inverse_scaling_redefine_math.yaml
+|       |       inverse_scaling_repetitive_algebra.yaml
+|       |       inverse_scaling_sig_figs.yaml
+|       |       inverse_scaling_winobias_antistereotype.yaml
+|       |       README.md
+|       |       _inverse_scaling_mc_yaml
+|       |       _some_results
+|       |       
+|       +---kmmlu
+|       |   |   README.md
+|       |   |   
+|       |   +---cot_hard
+|       |   |       kmmlu_cot_hard_accounting.yaml
+|       |   |       kmmlu_cot_hard_agricultural_sciences.yaml
+|       |   |       kmmlu_cot_hard_aviation_engineering_and_maintenance.yaml
+|       |   |       kmmlu_cot_hard_biology.yaml
+|       |   |       kmmlu_cot_hard_chemical_engineering.yaml
+|       |   |       kmmlu_cot_hard_chemistry.yaml
+|       |   |       kmmlu_cot_hard_civil_engineering.yaml
+|       |   |       kmmlu_cot_hard_computer_science.yaml
+|       |   |       kmmlu_cot_hard_construction.yaml
+|       |   |       kmmlu_cot_hard_criminal_law.yaml
+|       |   |       kmmlu_cot_hard_ecology.yaml
+|       |   |       kmmlu_cot_hard_economics.yaml
+|       |   |       kmmlu_cot_hard_education.yaml
+|       |   |       kmmlu_cot_hard_electrical_engineering.yaml
+|       |   |       kmmlu_cot_hard_electronics_engineering.yaml
+|       |   |       kmmlu_cot_hard_energy_management.yaml
+|       |   |       kmmlu_cot_hard_environmental_science.yaml
+|       |   |       kmmlu_cot_hard_fashion.yaml
+|       |   |       kmmlu_cot_hard_food_processing.yaml
+|       |   |       kmmlu_cot_hard_gas_technology_and_engineering.yaml
+|       |   |       kmmlu_cot_hard_geomatics.yaml
+|       |   |       kmmlu_cot_hard_health.yaml
+|       |   |       kmmlu_cot_hard_industrial_engineer.yaml
+|       |   |       kmmlu_cot_hard_information_technology.yaml
+|       |   |       kmmlu_cot_hard_interior_architecture_and_design.yaml
+|       |   |       kmmlu_cot_hard_korean_history.yaml
+|       |   |       kmmlu_cot_hard_law.yaml
+|       |   |       kmmlu_cot_hard_machine_design_and_manufacturing.yaml
+|       |   |       kmmlu_cot_hard_management.yaml
+|       |   |       kmmlu_cot_hard_maritime_engineering.yaml
+|       |   |       kmmlu_cot_hard_marketing.yaml
+|       |   |       kmmlu_cot_hard_materials_engineering.yaml
+|       |   |       kmmlu_cot_hard_math.yaml
+|       |   |       kmmlu_cot_hard_mechanical_engineering.yaml
+|       |   |       kmmlu_cot_hard_nondestructive_testing.yaml
+|       |   |       kmmlu_cot_hard_patent.yaml
+|       |   |       kmmlu_cot_hard_political_science_and_sociology.yaml
+|       |   |       kmmlu_cot_hard_psychology.yaml
+|       |   |       kmmlu_cot_hard_public_safety.yaml
+|       |   |       kmmlu_cot_hard_railway_and_automotive_engineering.yaml
+|       |   |       kmmlu_cot_hard_real_estate.yaml
+|       |   |       kmmlu_cot_hard_refrigerating_machinery.yaml
+|       |   |       kmmlu_cot_hard_social_welfare.yaml
+|       |   |       kmmlu_cot_hard_taxation.yaml
+|       |   |       kmmlu_cot_hard_telecommunications_and_wireless_technology.yaml
+|       |   |       _cot_kmmlu_yaml
+|       |   |       
+|       |   +---direct
+|       |   |       kmmlu_direct_accounting.yaml
+|       |   |       kmmlu_direct_agricultural_sciences.yaml
+|       |   |       kmmlu_direct_aviation_engineering_and_maintenance.yaml
+|       |   |       kmmlu_direct_biology.yaml
+|       |   |       kmmlu_direct_chemical_engineering.yaml
+|       |   |       kmmlu_direct_chemistry.yaml
+|       |   |       kmmlu_direct_civil_engineering.yaml
+|       |   |       kmmlu_direct_computer_science.yaml
+|       |   |       kmmlu_direct_construction.yaml
+|       |   |       kmmlu_direct_criminal_law.yaml
+|       |   |       kmmlu_direct_ecology.yaml
+|       |   |       kmmlu_direct_economics.yaml
+|       |   |       kmmlu_direct_education.yaml
+|       |   |       kmmlu_direct_electrical_engineering.yaml
+|       |   |       kmmlu_direct_electronics_engineering.yaml
+|       |   |       kmmlu_direct_energy_management.yaml
+|       |   |       kmmlu_direct_environmental_science.yaml
+|       |   |       kmmlu_direct_fashion.yaml
+|       |   |       kmmlu_direct_food_processing.yaml
+|       |   |       kmmlu_direct_gas_technology_and_engineering.yaml
+|       |   |       kmmlu_direct_geomatics.yaml
+|       |   |       kmmlu_direct_health.yaml
+|       |   |       kmmlu_direct_industrial_engineer.yaml
+|       |   |       kmmlu_direct_information_technology.yaml
+|       |   |       kmmlu_direct_interior_architecture_and_design.yaml
+|       |   |       kmmlu_direct_korean_history.yaml
+|       |   |       kmmlu_direct_law.yaml
+|       |   |       kmmlu_direct_machine_design_and_manufacturing.yaml
+|       |   |       kmmlu_direct_management.yaml
+|       |   |       kmmlu_direct_maritime_engineering.yaml
+|       |   |       kmmlu_direct_marketing.yaml
+|       |   |       kmmlu_direct_materials_engineering.yaml
+|       |   |       kmmlu_direct_math.yaml
+|       |   |       kmmlu_direct_mechanical_engineering.yaml
+|       |   |       kmmlu_direct_nondestructive_testing.yaml
+|       |   |       kmmlu_direct_patent.yaml
+|       |   |       kmmlu_direct_political_science_and_sociology.yaml
+|       |   |       kmmlu_direct_psychology.yaml
+|       |   |       kmmlu_direct_public_safety.yaml
+|       |   |       kmmlu_direct_railway_and_automotive_engineering.yaml
+|       |   |       kmmlu_direct_real_estate.yaml
+|       |   |       kmmlu_direct_refrigerating_machinery.yaml
+|       |   |       kmmlu_direct_social_welfare.yaml
+|       |   |       kmmlu_direct_taxation.yaml
+|       |   |       kmmlu_direct_telecommunications_and_wireless_technology.yaml
+|       |   |       _direct_kmmlu_yaml
+|       |   |       
+|       |   +---direct_hard
+|       |   |       kmmlu_direct_hard_accounting.yaml
+|       |   |       kmmlu_direct_hard_agricultural_sciences.yaml
+|       |   |       kmmlu_direct_hard_aviation_engineering_and_maintenance.yaml
+|       |   |       kmmlu_direct_hard_biology.yaml
+|       |   |       kmmlu_direct_hard_chemical_engineering.yaml
+|       |   |       kmmlu_direct_hard_chemistry.yaml
+|       |   |       kmmlu_direct_hard_civil_engineering.yaml
+|       |   |       kmmlu_direct_hard_computer_science.yaml
+|       |   |       kmmlu_direct_hard_construction.yaml
+|       |   |       kmmlu_direct_hard_criminal_law.yaml
+|       |   |       kmmlu_direct_hard_ecology.yaml
+|       |   |       kmmlu_direct_hard_economics.yaml
+|       |   |       kmmlu_direct_hard_education.yaml
+|       |   |       kmmlu_direct_hard_electrical_engineering.yaml
+|       |   |       kmmlu_direct_hard_electronics_engineering.yaml
+|       |   |       kmmlu_direct_hard_energy_management.yaml
+|       |   |       kmmlu_direct_hard_environmental_science.yaml
+|       |   |       kmmlu_direct_hard_fashion.yaml
+|       |   |       kmmlu_direct_hard_food_processing.yaml
+|       |   |       kmmlu_direct_hard_gas_technology_and_engineering.yaml
+|       |   |       kmmlu_direct_hard_geomatics.yaml
+|       |   |       kmmlu_direct_hard_health.yaml
+|       |   |       kmmlu_direct_hard_industrial_engineer.yaml
+|       |   |       kmmlu_direct_hard_information_technology.yaml
+|       |   |       kmmlu_direct_hard_interior_architecture_and_design.yaml
+|       |   |       kmmlu_direct_hard_korean_history.yaml
+|       |   |       kmmlu_direct_hard_law.yaml
+|       |   |       kmmlu_direct_hard_machine_design_and_manufacturing.yaml
+|       |   |       kmmlu_direct_hard_management.yaml
+|       |   |       kmmlu_direct_hard_maritime_engineering.yaml
+|       |   |       kmmlu_direct_hard_marketing.yaml
+|       |   |       kmmlu_direct_hard_materials_engineering.yaml
+|       |   |       kmmlu_direct_hard_math.yaml
+|       |   |       kmmlu_direct_hard_mechanical_engineering.yaml
+|       |   |       kmmlu_direct_hard_nondestructive_testing.yaml
+|       |   |       kmmlu_direct_hard_patent.yaml
+|       |   |       kmmlu_direct_hard_political_science_and_sociology.yaml
+|       |   |       kmmlu_direct_hard_psychology.yaml
+|       |   |       kmmlu_direct_hard_public_safety.yaml
+|       |   |       kmmlu_direct_hard_railway_and_automotive_engineering.yaml
+|       |   |       kmmlu_direct_hard_real_estate.yaml
+|       |   |       kmmlu_direct_hard_refrigerating_machinery.yaml
+|       |   |       kmmlu_direct_hard_social_welfare.yaml
+|       |   |       kmmlu_direct_hard_taxation.yaml
+|       |   |       kmmlu_direct_hard_telecommunications_and_wireless_technology.yaml
+|       |   |       _direct_hard_kmmlu_yaml
+|       |   |       
+|       |   \---hard
+|       |           kmmlu_hard_accounting.yaml
+|       |           kmmlu_hard_agricultural_sciences.yaml
+|       |           kmmlu_hard_aviation_engineering_and_maintenance.yaml
+|       |           kmmlu_hard_biology.yaml
+|       |           kmmlu_hard_chemical_engineering.yaml
+|       |           kmmlu_hard_chemistry.yaml
+|       |           kmmlu_hard_civil_engineering.yaml
+|       |           kmmlu_hard_computer_science.yaml
+|       |           kmmlu_hard_construction.yaml
+|       |           kmmlu_hard_criminal_law.yaml
+|       |           kmmlu_hard_ecology.yaml
+|       |           kmmlu_hard_economics.yaml
+|       |           kmmlu_hard_education.yaml
+|       |           kmmlu_hard_electrical_engineering.yaml
+|       |           kmmlu_hard_electronics_engineering.yaml
+|       |           kmmlu_hard_energy_management.yaml
+|       |           kmmlu_hard_environmental_science.yaml
+|       |           kmmlu_hard_fashion.yaml
+|       |           kmmlu_hard_food_processing.yaml
+|       |           kmmlu_hard_gas_technology_and_engineering.yaml
+|       |           kmmlu_hard_geomatics.yaml
+|       |           kmmlu_hard_health.yaml
+|       |           kmmlu_hard_industrial_engineer.yaml
+|       |           kmmlu_hard_information_technology.yaml
+|       |           kmmlu_hard_interior_architecture_and_design.yaml
+|       |           kmmlu_hard_korean_history.yaml
+|       |           kmmlu_hard_law.yaml
+|       |           kmmlu_hard_machine_design_and_manufacturing.yaml
+|       |           kmmlu_hard_management.yaml
+|       |           kmmlu_hard_maritime_engineering.yaml
+|       |           kmmlu_hard_marketing.yaml
+|       |           kmmlu_hard_materials_engineering.yaml
+|       |           kmmlu_hard_math.yaml
+|       |           kmmlu_hard_mechanical_engineering.yaml
+|       |           kmmlu_hard_nondestructive_testing.yaml
+|       |           kmmlu_hard_patent.yaml
+|       |           kmmlu_hard_political_science_and_sociology.yaml
+|       |           kmmlu_hard_psychology.yaml
+|       |           kmmlu_hard_public_safety.yaml
+|       |           kmmlu_hard_railway_and_automotive_engineering.yaml
+|       |           kmmlu_hard_real_estate.yaml
+|       |           kmmlu_hard_refrigerating_machinery.yaml
+|       |           kmmlu_hard_social_welfare.yaml
+|       |           kmmlu_hard_taxation.yaml
+|       |           kmmlu_hard_telecommunications_and_wireless_technology.yaml
+|       |           _hard_kmmlu_yaml
+|       |           
+|       +---kobest
+|       |       kobest_boolq.yaml
+|       |       kobest_copa.yaml
+|       |       kobest_hellaswag.yaml
+|       |       kobest_sentineg.yaml
+|       |       kobest_wic.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---kormedmcqa
+|       |       kormedmcqa_doctor.yaml
+|       |       kormedmcqa_nurse.yaml
+|       |       kormedmcqa_pharm.yaml
+|       |       README.md
+|       |       _kormedmcqa.yaml
+|       |       
+|       +---lambada
+|       |       lambada_openai.yaml
+|       |       lambada_standard.yaml
+|       |       README.md
+|       |       
+|       +---lambada_cloze
+|       |       lambada_openai_cloze.yaml
+|       |       lambada_standard_cloze.yaml
+|       |       README.md
+|       |       
+|       +---lambada_multilingual
+|       |       lambada_mt_de.yaml
+|       |       lambada_mt_en.yaml
+|       |       lambada_mt_es.yaml
+|       |       lambada_mt_fr.yaml
+|       |       lambada_mt_it.yaml
+|       |       README.md
+|       |       
+|       +---lambada_multilingual_stablelm
+|       |       lambada_mt_stablelm_de.yaml
+|       |       lambada_mt_stablelm_en.yaml
+|       |       lambada_mt_stablelm_es.yaml
+|       |       lambada_mt_stablelm_fr.yaml
+|       |       lambada_mt_stablelm_it.yaml
+|       |       lambada_mt_stablelm_nl.yaml
+|       |       lambada_mt_stablelm_pt.yaml
+|       |       README.md
+|       |       
+|       +---leaderboard
+|       |   |   leaderboard.yaml
+|       |   |   README.md
+|       |   |   
+|       |   +---bbh_mc
+|       |   |       boolean_expressions.yaml
+|       |   |       causal_judgement.yaml
+|       |   |       date_understanding.yaml
+|       |   |       disambiguation_qa.yaml
+|       |   |       formal_fallacies.yaml
+|       |   |       geometric_shapes.yaml
+|       |   |       hyperbaton.yaml
+|       |   |       logical_deduction_five_objects.yaml
+|       |   |       logical_deduction_seven_objects.yaml
+|       |   |       logical_deduction_three_objects.yaml
+|       |   |       movie_recommendation.yaml
+|       |   |       navigate.yaml
+|       |   |       object_counting.yaml
+|       |   |       penguins_in_a_table.yaml
+|       |   |       reasoning_about_colored_objects.yaml
+|       |   |       ruin_names.yaml
+|       |   |       salient_translation_error_detection.yaml
+|       |   |       snarks.yaml
+|       |   |       sports_understanding.yaml
+|       |   |       temporal_sequences.yaml
+|       |   |       tracking_shuffled_objects_five_objects.yaml
+|       |   |       tracking_shuffled_objects_seven_objects.yaml
+|       |   |       tracking_shuffled_objects_three_objects.yaml
+|       |   |       web_of_lies.yaml
+|       |   |       _fewshot_template_yaml
+|       |   |       _leaderboard_bbh.yaml
+|       |   |       
+|       |   +---gpqa
+|       |   |       gpqa_diamond_zeroshot.yaml
+|       |   |       gpqa_extended_zeroshot.yaml
+|       |   |       gpqa_main_zeroshot.yaml
+|       |   |       utils.py
+|       |   |       _leaderboard_gpqa.yaml
+|       |   |       _template_yaml
+|       |   |       
+|       |   +---ifeval
+|       |   |       ifeval.yaml
+|       |   |       instructions.py
+|       |   |       instructions_registry.py
+|       |   |       instructions_util.py
+|       |   |       utils.py
+|       |   |       _leaderboard_instruction_following.yaml
+|       |   |       
+|       |   +---math
+|       |   |       math_algebra.yaml
+|       |   |       math_counting_and_prob.yaml
+|       |   |       math_geometry.yaml
+|       |   |       math_intermediate_algebra.yaml
+|       |   |       math_num_theory.yaml
+|       |   |       math_prealgebra.yaml
+|       |   |       math_precalculus.yaml
+|       |   |       utils.py
+|       |   |       _leaderboard_math.yaml
+|       |   |       _template_yaml
+|       |   |       
+|       |   +---mmlu_pro
+|       |   |       mmlu_pro.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   \---musr
+|       |           musr_murder_mysteries.yaml
+|       |           musr_object_placements.yaml
+|       |           musr_team_allocation.yaml
+|       |           utils.py
+|       |           _musr.yaml
+|       |           _template_yaml
+|       |           
+|       +---lingoly
+|       |       lingoly_context.yaml
+|       |       lingoly_group.yaml
+|       |       lingoly_nocontext.yaml
+|       |       README.md
+|       |       script.py
+|       |       utils.py
+|       |       
+|       +---logiqa
+|       |       logiqa.yaml
+|       |       README.md
+|       |       utils_logiqa.py
+|       |       
+|       +---logiqa2
+|       |       logieval.yaml
+|       |       logiqa2.yaml
+|       |       README.md
+|       |       utils_logiqa2.py
+|       |       
+|       +---mathqa
+|       |       mathqa.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---mc_taco
+|       |       default.yaml
+|       |       README.md
+|       |       
+|       +---medmcqa
+|       |       medmcqa.yaml
+|       |       utils_medmcqa.py
+|       |       
+|       +---medqa
+|       |       medqa.yaml
+|       |       preprocess_medqa.py
+|       |       
+|       +---med_concepts_qa
+|       |       med_concepts_qa_atc_easy.yaml
+|       |       med_concepts_qa_atc_hard.yaml
+|       |       med_concepts_qa_atc_medium.yaml
+|       |       med_concepts_qa_icd10cm_easy.yaml
+|       |       med_concepts_qa_icd10cm_hard.yaml
+|       |       med_concepts_qa_icd10cm_medium.yaml
+|       |       med_concepts_qa_icd10proc_easy.yaml
+|       |       med_concepts_qa_icd10proc_hard.yaml
+|       |       med_concepts_qa_icd10proc_medium.yaml
+|       |       med_concepts_qa_icd9cm_easy.yaml
+|       |       med_concepts_qa_icd9cm_hard.yaml
+|       |       med_concepts_qa_icd9cm_medium.yaml
+|       |       med_concepts_qa_icd9proc_easy.yaml
+|       |       med_concepts_qa_icd9proc_hard.yaml
+|       |       med_concepts_qa_icd9proc_medium.yaml
+|       |       README.md
+|       |       _default_template_yaml
+|       |       _generate_configs.py
+|       |       _med_concepts_qa.yaml
+|       |       _med_concepts_qa_atc.yaml
+|       |       _med_concepts_qa_icd10cm.yaml
+|       |       _med_concepts_qa_icd10proc.yaml
+|       |       _med_concepts_qa_icd9cm.yaml
+|       |       _med_concepts_qa_icd9proc.yaml
+|       |       
+|       +---mela
+|       |       mela_ar.yaml
+|       |       mela_de.yaml
+|       |       mela_en.yaml
+|       |       mela_es.yaml
+|       |       mela_fr.yaml
+|       |       mela_is.yaml
+|       |       mela_it.yaml
+|       |       mela_ja.yaml
+|       |       mela_ru.yaml
+|       |       mela_zh.yaml
+|       |       README.md
+|       |       _mela.yaml
+|       |       
+|       +---mgsm
+|       |   |   gen_yaml.sh
+|       |   |   README.md
+|       |   |   utils.py
+|       |   |   
+|       |   +---direct
+|       |   |       direct_yaml
+|       |   |       mgsm_direct_bn.yaml
+|       |   |       mgsm_direct_de.yaml
+|       |   |       mgsm_direct_en.yaml
+|       |   |       mgsm_direct_es.yaml
+|       |   |       mgsm_direct_fr.yaml
+|       |   |       mgsm_direct_ja.yaml
+|       |   |       mgsm_direct_ru.yaml
+|       |   |       mgsm_direct_sw.yaml
+|       |   |       mgsm_direct_te.yaml
+|       |   |       mgsm_direct_th.yaml
+|       |   |       mgsm_direct_zh.yaml
+|       |   |       
+|       |   +---en_cot
+|       |   |       cot_yaml
+|       |   |       mgsm_en_cot_bn.yaml
+|       |   |       mgsm_en_cot_de.yaml
+|       |   |       mgsm_en_cot_en.yaml
+|       |   |       mgsm_en_cot_es.yaml
+|       |   |       mgsm_en_cot_fr.yaml
+|       |   |       mgsm_en_cot_ja.yaml
+|       |   |       mgsm_en_cot_ru.yaml
+|       |   |       mgsm_en_cot_sw.yaml
+|       |   |       mgsm_en_cot_te.yaml
+|       |   |       mgsm_en_cot_th.yaml
+|       |   |       mgsm_en_cot_zh.yaml
+|       |   |       
+|       |   \---native_cot
+|       |           cot_yaml
+|       |           mgsm_native_cot_bn.yaml
+|       |           mgsm_native_cot_de.yaml
+|       |           mgsm_native_cot_en.yaml
+|       |           mgsm_native_cot_es.yaml
+|       |           mgsm_native_cot_fr.yaml
+|       |           mgsm_native_cot_ja.yaml
+|       |           mgsm_native_cot_ru.yaml
+|       |           mgsm_native_cot_sw.yaml
+|       |           mgsm_native_cot_te.yaml
+|       |           mgsm_native_cot_th.yaml
+|       |           mgsm_native_cot_zh.yaml
+|       |           
+|       +---minerva_math
+|       |       minerva_math_algebra.yaml
+|       |       minerva_math_counting_and_prob.yaml
+|       |       minerva_math_geometry.yaml
+|       |       minerva_math_intermediate_algebra.yaml
+|       |       minerva_math_num_theory.yaml
+|       |       minerva_math_prealgebra.yaml
+|       |       minerva_math_precalc.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---mmlu
+|       |   |   README.md
+|       |   |   _generate_configs.py
+|       |   |   
+|       |   +---continuation
+|       |   |       mmlu_abstract_algebra.yaml
+|       |   |       mmlu_anatomy.yaml
+|       |   |       mmlu_astronomy.yaml
+|       |   |       mmlu_business_ethics.yaml
+|       |   |       mmlu_clinical_knowledge.yaml
+|       |   |       mmlu_college_biology.yaml
+|       |   |       mmlu_college_chemistry.yaml
+|       |   |       mmlu_college_computer_science.yaml
+|       |   |       mmlu_college_mathematics.yaml
+|       |   |       mmlu_college_medicine.yaml
+|       |   |       mmlu_college_physics.yaml
+|       |   |       mmlu_computer_security.yaml
+|       |   |       mmlu_conceptual_physics.yaml
+|       |   |       mmlu_econometrics.yaml
+|       |   |       mmlu_electrical_engineering.yaml
+|       |   |       mmlu_elementary_mathematics.yaml
+|       |   |       mmlu_formal_logic.yaml
+|       |   |       mmlu_global_facts.yaml
+|       |   |       mmlu_high_school_biology.yaml
+|       |   |       mmlu_high_school_chemistry.yaml
+|       |   |       mmlu_high_school_computer_science.yaml
+|       |   |       mmlu_high_school_european_history.yaml
+|       |   |       mmlu_high_school_geography.yaml
+|       |   |       mmlu_high_school_government_and_politics.yaml
+|       |   |       mmlu_high_school_macroeconomics.yaml
+|       |   |       mmlu_high_school_mathematics.yaml
+|       |   |       mmlu_high_school_microeconomics.yaml
+|       |   |       mmlu_high_school_physics.yaml
+|       |   |       mmlu_high_school_psychology.yaml
+|       |   |       mmlu_high_school_statistics.yaml
+|       |   |       mmlu_high_school_us_history.yaml
+|       |   |       mmlu_high_school_world_history.yaml
+|       |   |       mmlu_human_aging.yaml
+|       |   |       mmlu_human_sexuality.yaml
+|       |   |       mmlu_international_law.yaml
+|       |   |       mmlu_jurisprudence.yaml
+|       |   |       mmlu_logical_fallacies.yaml
+|       |   |       mmlu_machine_learning.yaml
+|       |   |       mmlu_management.yaml
+|       |   |       mmlu_marketing.yaml
+|       |   |       mmlu_medical_genetics.yaml
+|       |   |       mmlu_miscellaneous.yaml
+|       |   |       mmlu_moral_disputes.yaml
+|       |   |       mmlu_moral_scenarios.yaml
+|       |   |       mmlu_nutrition.yaml
+|       |   |       mmlu_philosophy.yaml
+|       |   |       mmlu_prehistory.yaml
+|       |   |       mmlu_professional_accounting.yaml
+|       |   |       mmlu_professional_law.yaml
+|       |   |       mmlu_professional_medicine.yaml
+|       |   |       mmlu_professional_psychology.yaml
+|       |   |       mmlu_public_relations.yaml
+|       |   |       mmlu_security_studies.yaml
+|       |   |       mmlu_sociology.yaml
+|       |   |       mmlu_us_foreign_policy.yaml
+|       |   |       mmlu_virology.yaml
+|       |   |       mmlu_world_religions.yaml
+|       |   |       _continuation_template_yaml
+|       |   |       _mmlu.yaml
+|       |   |       
+|       |   +---default
+|       |   |       mmlu_abstract_algebra.yaml
+|       |   |       mmlu_anatomy.yaml
+|       |   |       mmlu_astronomy.yaml
+|       |   |       mmlu_business_ethics.yaml
+|       |   |       mmlu_clinical_knowledge.yaml
+|       |   |       mmlu_college_biology.yaml
+|       |   |       mmlu_college_chemistry.yaml
+|       |   |       mmlu_college_computer_science.yaml
+|       |   |       mmlu_college_mathematics.yaml
+|       |   |       mmlu_college_medicine.yaml
+|       |   |       mmlu_college_physics.yaml
+|       |   |       mmlu_computer_security.yaml
+|       |   |       mmlu_conceptual_physics.yaml
+|       |   |       mmlu_econometrics.yaml
+|       |   |       mmlu_electrical_engineering.yaml
+|       |   |       mmlu_elementary_mathematics.yaml
+|       |   |       mmlu_formal_logic.yaml
+|       |   |       mmlu_global_facts.yaml
+|       |   |       mmlu_high_school_biology.yaml
+|       |   |       mmlu_high_school_chemistry.yaml
+|       |   |       mmlu_high_school_computer_science.yaml
+|       |   |       mmlu_high_school_european_history.yaml
+|       |   |       mmlu_high_school_geography.yaml
+|       |   |       mmlu_high_school_government_and_politics.yaml
+|       |   |       mmlu_high_school_macroeconomics.yaml
+|       |   |       mmlu_high_school_mathematics.yaml
+|       |   |       mmlu_high_school_microeconomics.yaml
+|       |   |       mmlu_high_school_physics.yaml
+|       |   |       mmlu_high_school_psychology.yaml
+|       |   |       mmlu_high_school_statistics.yaml
+|       |   |       mmlu_high_school_us_history.yaml
+|       |   |       mmlu_high_school_world_history.yaml
+|       |   |       mmlu_human_aging.yaml
+|       |   |       mmlu_human_sexuality.yaml
+|       |   |       mmlu_international_law.yaml
+|       |   |       mmlu_jurisprudence.yaml
+|       |   |       mmlu_logical_fallacies.yaml
+|       |   |       mmlu_machine_learning.yaml
+|       |   |       mmlu_management.yaml
+|       |   |       mmlu_marketing.yaml
+|       |   |       mmlu_medical_genetics.yaml
+|       |   |       mmlu_miscellaneous.yaml
+|       |   |       mmlu_moral_disputes.yaml
+|       |   |       mmlu_moral_scenarios.yaml
+|       |   |       mmlu_nutrition.yaml
+|       |   |       mmlu_philosophy.yaml
+|       |   |       mmlu_prehistory.yaml
+|       |   |       mmlu_professional_accounting.yaml
+|       |   |       mmlu_professional_law.yaml
+|       |   |       mmlu_professional_medicine.yaml
+|       |   |       mmlu_professional_psychology.yaml
+|       |   |       mmlu_public_relations.yaml
+|       |   |       mmlu_security_studies.yaml
+|       |   |       mmlu_sociology.yaml
+|       |   |       mmlu_us_foreign_policy.yaml
+|       |   |       mmlu_virology.yaml
+|       |   |       mmlu_world_religions.yaml
+|       |   |       _default_template_yaml
+|       |   |       _mmlu.yaml
+|       |   |       _mmlu_humanities.yaml
+|       |   |       _mmlu_other.yaml
+|       |   |       _mmlu_social_sciences.yaml
+|       |   |       _mmlu_stem.yaml
+|       |   |       
+|       |   +---flan_cot_fewshot
+|       |   |       mmlu_abstract_algebra.yaml
+|       |   |       mmlu_anatomy.yaml
+|       |   |       mmlu_astronomy.yaml
+|       |   |       mmlu_business_ethics.yaml
+|       |   |       mmlu_clinical_knowledge.yaml
+|       |   |       mmlu_college_biology.yaml
+|       |   |       mmlu_college_chemistry.yaml
+|       |   |       mmlu_college_computer_science.yaml
+|       |   |       mmlu_college_mathematics.yaml
+|       |   |       mmlu_college_medicine.yaml
+|       |   |       mmlu_college_physics.yaml
+|       |   |       mmlu_computer_security.yaml
+|       |   |       mmlu_conceptual_physics.yaml
+|       |   |       mmlu_econometrics.yaml
+|       |   |       mmlu_electrical_engineering.yaml
+|       |   |       mmlu_elementary_mathematics.yaml
+|       |   |       mmlu_formal_logic.yaml
+|       |   |       mmlu_global_facts.yaml
+|       |   |       mmlu_high_school_biology.yaml
+|       |   |       mmlu_high_school_chemistry.yaml
+|       |   |       mmlu_high_school_computer_science.yaml
+|       |   |       mmlu_high_school_european_history.yaml
+|       |   |       mmlu_high_school_geography.yaml
+|       |   |       mmlu_high_school_government_and_politics.yaml
+|       |   |       mmlu_high_school_macroeconomics.yaml
+|       |   |       mmlu_high_school_mathematics.yaml
+|       |   |       mmlu_high_school_microeconomics.yaml
+|       |   |       mmlu_high_school_physics.yaml
+|       |   |       mmlu_high_school_psychology.yaml
+|       |   |       mmlu_high_school_statistics.yaml
+|       |   |       mmlu_high_school_us_history.yaml
+|       |   |       mmlu_high_school_world_history.yaml
+|       |   |       mmlu_human_aging.yaml
+|       |   |       mmlu_human_sexuality.yaml
+|       |   |       mmlu_international_law.yaml
+|       |   |       mmlu_jurisprudence.yaml
+|       |   |       mmlu_logical_fallacies.yaml
+|       |   |       mmlu_machine_learning.yaml
+|       |   |       mmlu_management.yaml
+|       |   |       mmlu_marketing.yaml
+|       |   |       mmlu_medical_genetics.yaml
+|       |   |       mmlu_miscellaneous.yaml
+|       |   |       mmlu_moral_disputes.yaml
+|       |   |       mmlu_moral_scenarios.yaml
+|       |   |       mmlu_nutrition.yaml
+|       |   |       mmlu_philosophy.yaml
+|       |   |       mmlu_prehistory.yaml
+|       |   |       mmlu_professional_accounting.yaml
+|       |   |       mmlu_professional_law.yaml
+|       |   |       mmlu_professional_medicine.yaml
+|       |   |       mmlu_professional_psychology.yaml
+|       |   |       mmlu_public_relations.yaml
+|       |   |       mmlu_security_studies.yaml
+|       |   |       mmlu_sociology.yaml
+|       |   |       mmlu_us_foreign_policy.yaml
+|       |   |       mmlu_virology.yaml
+|       |   |       mmlu_world_religions.yaml
+|       |   |       _cot_prompts.json
+|       |   |       _mmlu.yaml
+|       |   |       _mmlu_flan_cot_fewshot_template_yaml
+|       |   |       
+|       |   +---flan_cot_zeroshot
+|       |   |       mmlu_abstract_algebra.yaml
+|       |   |       mmlu_anatomy.yaml
+|       |   |       mmlu_astronomy.yaml
+|       |   |       mmlu_business_ethics.yaml
+|       |   |       mmlu_clinical_knowledge.yaml
+|       |   |       mmlu_college_biology.yaml
+|       |   |       mmlu_college_chemistry.yaml
+|       |   |       mmlu_college_computer_science.yaml
+|       |   |       mmlu_college_mathematics.yaml
+|       |   |       mmlu_college_medicine.yaml
+|       |   |       mmlu_college_physics.yaml
+|       |   |       mmlu_computer_security.yaml
+|       |   |       mmlu_conceptual_physics.yaml
+|       |   |       mmlu_econometrics.yaml
+|       |   |       mmlu_electrical_engineering.yaml
+|       |   |       mmlu_elementary_mathematics.yaml
+|       |   |       mmlu_formal_logic.yaml
+|       |   |       mmlu_global_facts.yaml
+|       |   |       mmlu_high_school_biology.yaml
+|       |   |       mmlu_high_school_chemistry.yaml
+|       |   |       mmlu_high_school_computer_science.yaml
+|       |   |       mmlu_high_school_european_history.yaml
+|       |   |       mmlu_high_school_geography.yaml
+|       |   |       mmlu_high_school_government_and_politics.yaml
+|       |   |       mmlu_high_school_macroeconomics.yaml
+|       |   |       mmlu_high_school_mathematics.yaml
+|       |   |       mmlu_high_school_microeconomics.yaml
+|       |   |       mmlu_high_school_physics.yaml
+|       |   |       mmlu_high_school_psychology.yaml
+|       |   |       mmlu_high_school_statistics.yaml
+|       |   |       mmlu_high_school_us_history.yaml
+|       |   |       mmlu_high_school_world_history.yaml
+|       |   |       mmlu_human_aging.yaml
+|       |   |       mmlu_human_sexuality.yaml
+|       |   |       mmlu_international_law.yaml
+|       |   |       mmlu_jurisprudence.yaml
+|       |   |       mmlu_logical_fallacies.yaml
+|       |   |       mmlu_machine_learning.yaml
+|       |   |       mmlu_management.yaml
+|       |   |       mmlu_marketing.yaml
+|       |   |       mmlu_medical_genetics.yaml
+|       |   |       mmlu_miscellaneous.yaml
+|       |   |       mmlu_moral_disputes.yaml
+|       |   |       mmlu_moral_scenarios.yaml
+|       |   |       mmlu_nutrition.yaml
+|       |   |       mmlu_philosophy.yaml
+|       |   |       mmlu_prehistory.yaml
+|       |   |       mmlu_professional_accounting.yaml
+|       |   |       mmlu_professional_law.yaml
+|       |   |       mmlu_professional_medicine.yaml
+|       |   |       mmlu_professional_psychology.yaml
+|       |   |       mmlu_public_relations.yaml
+|       |   |       mmlu_security_studies.yaml
+|       |   |       mmlu_sociology.yaml
+|       |   |       mmlu_us_foreign_policy.yaml
+|       |   |       mmlu_virology.yaml
+|       |   |       mmlu_world_religions.yaml
+|       |   |       utils.py
+|       |   |       _mmlu.yaml
+|       |   |       _mmlu_flan_cot_zeroshot_template_yaml
+|       |   |       
+|       |   +---flan_n_shot
+|       |   |   +---generative
+|       |   |   |       mmlu_abstract_algebra.yaml
+|       |   |   |       mmlu_anatomy.yaml
+|       |   |   |       mmlu_astronomy.yaml
+|       |   |   |       mmlu_business_ethics.yaml
+|       |   |   |       mmlu_clinical_knowledge.yaml
+|       |   |   |       mmlu_college_biology.yaml
+|       |   |   |       mmlu_college_chemistry.yaml
+|       |   |   |       mmlu_college_computer_science.yaml
+|       |   |   |       mmlu_college_mathematics.yaml
+|       |   |   |       mmlu_college_medicine.yaml
+|       |   |   |       mmlu_college_physics.yaml
+|       |   |   |       mmlu_computer_security.yaml
+|       |   |   |       mmlu_conceptual_physics.yaml
+|       |   |   |       mmlu_econometrics.yaml
+|       |   |   |       mmlu_electrical_engineering.yaml
+|       |   |   |       mmlu_elementary_mathematics.yaml
+|       |   |   |       mmlu_formal_logic.yaml
+|       |   |   |       mmlu_global_facts.yaml
+|       |   |   |       mmlu_high_school_biology.yaml
+|       |   |   |       mmlu_high_school_chemistry.yaml
+|       |   |   |       mmlu_high_school_computer_science.yaml
+|       |   |   |       mmlu_high_school_european_history.yaml
+|       |   |   |       mmlu_high_school_geography.yaml
+|       |   |   |       mmlu_high_school_government_and_politics.yaml
+|       |   |   |       mmlu_high_school_macroeconomics.yaml
+|       |   |   |       mmlu_high_school_mathematics.yaml
+|       |   |   |       mmlu_high_school_microeconomics.yaml
+|       |   |   |       mmlu_high_school_physics.yaml
+|       |   |   |       mmlu_high_school_psychology.yaml
+|       |   |   |       mmlu_high_school_statistics.yaml
+|       |   |   |       mmlu_high_school_us_history.yaml
+|       |   |   |       mmlu_high_school_world_history.yaml
+|       |   |   |       mmlu_human_aging.yaml
+|       |   |   |       mmlu_human_sexuality.yaml
+|       |   |   |       mmlu_international_law.yaml
+|       |   |   |       mmlu_jurisprudence.yaml
+|       |   |   |       mmlu_logical_fallacies.yaml
+|       |   |   |       mmlu_machine_learning.yaml
+|       |   |   |       mmlu_management.yaml
+|       |   |   |       mmlu_marketing.yaml
+|       |   |   |       mmlu_medical_genetics.yaml
+|       |   |   |       mmlu_miscellaneous.yaml
+|       |   |   |       mmlu_moral_disputes.yaml
+|       |   |   |       mmlu_moral_scenarios.yaml
+|       |   |   |       mmlu_nutrition.yaml
+|       |   |   |       mmlu_philosophy.yaml
+|       |   |   |       mmlu_prehistory.yaml
+|       |   |   |       mmlu_professional_accounting.yaml
+|       |   |   |       mmlu_professional_law.yaml
+|       |   |   |       mmlu_professional_medicine.yaml
+|       |   |   |       mmlu_professional_psychology.yaml
+|       |   |   |       mmlu_public_relations.yaml
+|       |   |   |       mmlu_security_studies.yaml
+|       |   |   |       mmlu_sociology.yaml
+|       |   |   |       mmlu_us_foreign_policy.yaml
+|       |   |   |       mmlu_virology.yaml
+|       |   |   |       mmlu_world_religions.yaml
+|       |   |   |       utils.py
+|       |   |   |       _mmlu.yaml
+|       |   |   |       _mmlu_flan_generative_template_yaml
+|       |   |   |       
+|       |   |   \---loglikelihood
+|       |   |           mmlu_abstract_algebra.yaml
+|       |   |           mmlu_anatomy.yaml
+|       |   |           mmlu_astronomy.yaml
+|       |   |           mmlu_business_ethics.yaml
+|       |   |           mmlu_clinical_knowledge.yaml
+|       |   |           mmlu_college_biology.yaml
+|       |   |           mmlu_college_chemistry.yaml
+|       |   |           mmlu_college_computer_science.yaml
+|       |   |           mmlu_college_mathematics.yaml
+|       |   |           mmlu_college_medicine.yaml
+|       |   |           mmlu_college_physics.yaml
+|       |   |           mmlu_computer_security.yaml
+|       |   |           mmlu_conceptual_physics.yaml
+|       |   |           mmlu_econometrics.yaml
+|       |   |           mmlu_electrical_engineering.yaml
+|       |   |           mmlu_elementary_mathematics.yaml
+|       |   |           mmlu_formal_logic.yaml
+|       |   |           mmlu_global_facts.yaml
+|       |   |           mmlu_high_school_biology.yaml
+|       |   |           mmlu_high_school_chemistry.yaml
+|       |   |           mmlu_high_school_computer_science.yaml
+|       |   |           mmlu_high_school_european_history.yaml
+|       |   |           mmlu_high_school_geography.yaml
+|       |   |           mmlu_high_school_government_and_politics.yaml
+|       |   |           mmlu_high_school_macroeconomics.yaml
+|       |   |           mmlu_high_school_mathematics.yaml
+|       |   |           mmlu_high_school_microeconomics.yaml
+|       |   |           mmlu_high_school_physics.yaml
+|       |   |           mmlu_high_school_psychology.yaml
+|       |   |           mmlu_high_school_statistics.yaml
+|       |   |           mmlu_high_school_us_history.yaml
+|       |   |           mmlu_high_school_world_history.yaml
+|       |   |           mmlu_human_aging.yaml
+|       |   |           mmlu_human_sexuality.yaml
+|       |   |           mmlu_international_law.yaml
+|       |   |           mmlu_jurisprudence.yaml
+|       |   |           mmlu_logical_fallacies.yaml
+|       |   |           mmlu_machine_learning.yaml
+|       |   |           mmlu_management.yaml
+|       |   |           mmlu_marketing.yaml
+|       |   |           mmlu_medical_genetics.yaml
+|       |   |           mmlu_miscellaneous.yaml
+|       |   |           mmlu_moral_disputes.yaml
+|       |   |           mmlu_moral_scenarios.yaml
+|       |   |           mmlu_nutrition.yaml
+|       |   |           mmlu_philosophy.yaml
+|       |   |           mmlu_prehistory.yaml
+|       |   |           mmlu_professional_accounting.yaml
+|       |   |           mmlu_professional_law.yaml
+|       |   |           mmlu_professional_medicine.yaml
+|       |   |           mmlu_professional_psychology.yaml
+|       |   |           mmlu_public_relations.yaml
+|       |   |           mmlu_security_studies.yaml
+|       |   |           mmlu_sociology.yaml
+|       |   |           mmlu_us_foreign_policy.yaml
+|       |   |           mmlu_virology.yaml
+|       |   |           mmlu_world_religions.yaml
+|       |   |           _mmlu.yaml
+|       |   |           _mmlu_flan_loglikelihood_template_yaml
+|       |   |           
+|       |   \---generative
+|       |           mmlu_abstract_algebra.yaml
+|       |           mmlu_anatomy.yaml
+|       |           mmlu_astronomy.yaml
+|       |           mmlu_business_ethics.yaml
+|       |           mmlu_clinical_knowledge.yaml
+|       |           mmlu_college_biology.yaml
+|       |           mmlu_college_chemistry.yaml
+|       |           mmlu_college_computer_science.yaml
+|       |           mmlu_college_mathematics.yaml
+|       |           mmlu_college_medicine.yaml
+|       |           mmlu_college_physics.yaml
+|       |           mmlu_computer_security.yaml
+|       |           mmlu_conceptual_physics.yaml
+|       |           mmlu_econometrics.yaml
+|       |           mmlu_electrical_engineering.yaml
+|       |           mmlu_elementary_mathematics.yaml
+|       |           mmlu_formal_logic.yaml
+|       |           mmlu_global_facts.yaml
+|       |           mmlu_high_school_biology.yaml
+|       |           mmlu_high_school_chemistry.yaml
+|       |           mmlu_high_school_computer_science.yaml
+|       |           mmlu_high_school_european_history.yaml
+|       |           mmlu_high_school_geography.yaml
+|       |           mmlu_high_school_government_and_politics.yaml
+|       |           mmlu_high_school_macroeconomics.yaml
+|       |           mmlu_high_school_mathematics.yaml
+|       |           mmlu_high_school_microeconomics.yaml
+|       |           mmlu_high_school_physics.yaml
+|       |           mmlu_high_school_psychology.yaml
+|       |           mmlu_high_school_statistics.yaml
+|       |           mmlu_high_school_us_history.yaml
+|       |           mmlu_high_school_world_history.yaml
+|       |           mmlu_human_aging.yaml
+|       |           mmlu_human_sexuality.yaml
+|       |           mmlu_international_law.yaml
+|       |           mmlu_jurisprudence.yaml
+|       |           mmlu_logical_fallacies.yaml
+|       |           mmlu_machine_learning.yaml
+|       |           mmlu_management.yaml
+|       |           mmlu_marketing.yaml
+|       |           mmlu_medical_genetics.yaml
+|       |           mmlu_miscellaneous.yaml
+|       |           mmlu_moral_disputes.yaml
+|       |           mmlu_moral_scenarios.yaml
+|       |           mmlu_nutrition.yaml
+|       |           mmlu_philosophy.yaml
+|       |           mmlu_prehistory.yaml
+|       |           mmlu_professional_accounting.yaml
+|       |           mmlu_professional_law.yaml
+|       |           mmlu_professional_medicine.yaml
+|       |           mmlu_professional_psychology.yaml
+|       |           mmlu_public_relations.yaml
+|       |           mmlu_security_studies.yaml
+|       |           mmlu_sociology.yaml
+|       |           mmlu_us_foreign_policy.yaml
+|       |           mmlu_virology.yaml
+|       |           mmlu_world_religions.yaml
+|       |           _default_template_yaml
+|       |           _mmlu.yaml
+|       |           
+|       +---mmlusr
+|       |   |   config.py
+|       |   |   README.md
+|       |   |   
+|       |   +---answer_only
+|       |   |       answer_only_abstract_algebra.yaml
+|       |   |       answer_only_anatomy.yaml
+|       |   |       answer_only_astronomy.yaml
+|       |   |       answer_only_business_ethics.yaml
+|       |   |       answer_only_clinical_knowledge.yaml
+|       |   |       answer_only_college_biology.yaml
+|       |   |       answer_only_college_chemistry.yaml
+|       |   |       answer_only_college_computer_science.yaml
+|       |   |       answer_only_college_mathematics.yaml
+|       |   |       answer_only_college_medicine.yaml
+|       |   |       answer_only_college_physics.yaml
+|       |   |       answer_only_computer_security.yaml
+|       |   |       answer_only_conceptual_physics.yaml
+|       |   |       answer_only_econometrics.yaml
+|       |   |       answer_only_electrical_engineering.yaml
+|       |   |       answer_only_elementary_mathematics.yaml
+|       |   |       answer_only_formal_logic.yaml
+|       |   |       answer_only_global_facts.yaml
+|       |   |       answer_only_high_school_biology.yaml
+|       |   |       answer_only_high_school_chemistry.yaml
+|       |   |       answer_only_high_school_computer_science.yaml
+|       |   |       answer_only_high_school_european_history.yaml
+|       |   |       answer_only_high_school_geography.yaml
+|       |   |       answer_only_high_school_government_and_politics.yaml
+|       |   |       answer_only_high_school_macroeconomics.yaml
+|       |   |       answer_only_high_school_mathematics.yaml
+|       |   |       answer_only_high_school_microeconomics.yaml
+|       |   |       answer_only_high_school_physics.yaml
+|       |   |       answer_only_high_school_psychology.yaml
+|       |   |       answer_only_high_school_statistics.yaml
+|       |   |       answer_only_high_school_us_history.yaml
+|       |   |       answer_only_high_school_world_history.yaml
+|       |   |       answer_only_human_aging.yaml
+|       |   |       answer_only_human_sexuality.yaml
+|       |   |       answer_only_international_law.yaml
+|       |   |       answer_only_jurisprudence.yaml
+|       |   |       answer_only_logical_fallacies.yaml
+|       |   |       answer_only_machine_learning.yaml
+|       |   |       answer_only_management.yaml
+|       |   |       answer_only_marketing.yaml
+|       |   |       answer_only_medical_genetics.yaml
+|       |   |       answer_only_miscellaneous.yaml
+|       |   |       answer_only_moral_disputes.yaml
+|       |   |       answer_only_moral_scenarios.yaml
+|       |   |       answer_only_nutrition.yaml
+|       |   |       answer_only_philosophy.yaml
+|       |   |       answer_only_prehistory.yaml
+|       |   |       answer_only_professional_accounting.yaml
+|       |   |       answer_only_professional_law.yaml
+|       |   |       answer_only_professional_medicine.yaml
+|       |   |       answer_only_professional_psychology.yaml
+|       |   |       answer_only_public_relations.yaml
+|       |   |       answer_only_security_studies.yaml
+|       |   |       answer_only_sociology.yaml
+|       |   |       answer_only_us_foreign_policy.yaml
+|       |   |       answer_only_virology.yaml
+|       |   |       answer_only_world_religions.yaml
+|       |   |       utils.py
+|       |   |       _answer_only.yaml
+|       |   |       _mmlusr_a_yml
+|       |   |       
+|       |   +---question_and_answer
+|       |   |       question_and_answer_abstract_algebra.yaml
+|       |   |       question_and_answer_anatomy.yaml
+|       |   |       question_and_answer_astronomy.yaml
+|       |   |       question_and_answer_business_ethics.yaml
+|       |   |       question_and_answer_clinical_knowledge.yaml
+|       |   |       question_and_answer_college_biology.yaml
+|       |   |       question_and_answer_college_chemistry.yaml
+|       |   |       question_and_answer_college_computer_science.yaml
+|       |   |       question_and_answer_college_mathematics.yaml
+|       |   |       question_and_answer_college_medicine.yaml
+|       |   |       question_and_answer_college_physics.yaml
+|       |   |       question_and_answer_computer_security.yaml
+|       |   |       question_and_answer_conceptual_physics.yaml
+|       |   |       question_and_answer_econometrics.yaml
+|       |   |       question_and_answer_electrical_engineering.yaml
+|       |   |       question_and_answer_elementary_mathematics.yaml
+|       |   |       question_and_answer_formal_logic.yaml
+|       |   |       question_and_answer_global_facts.yaml
+|       |   |       question_and_answer_high_school_biology.yaml
+|       |   |       question_and_answer_high_school_chemistry.yaml
+|       |   |       question_and_answer_high_school_computer_science.yaml
+|       |   |       question_and_answer_high_school_european_history.yaml
+|       |   |       question_and_answer_high_school_geography.yaml
+|       |   |       question_and_answer_high_school_government_and_politics.yaml
+|       |   |       question_and_answer_high_school_macroeconomics.yaml
+|       |   |       question_and_answer_high_school_mathematics.yaml
+|       |   |       question_and_answer_high_school_microeconomics.yaml
+|       |   |       question_and_answer_high_school_physics.yaml
+|       |   |       question_and_answer_high_school_psychology.yaml
+|       |   |       question_and_answer_high_school_statistics.yaml
+|       |   |       question_and_answer_high_school_us_history.yaml
+|       |   |       question_and_answer_high_school_world_history.yaml
+|       |   |       question_and_answer_human_aging.yaml
+|       |   |       question_and_answer_human_sexuality.yaml
+|       |   |       question_and_answer_international_law.yaml
+|       |   |       question_and_answer_jurisprudence.yaml
+|       |   |       question_and_answer_logical_fallacies.yaml
+|       |   |       question_and_answer_machine_learning.yaml
+|       |   |       question_and_answer_management.yaml
+|       |   |       question_and_answer_marketing.yaml
+|       |   |       question_and_answer_medical_genetics.yaml
+|       |   |       question_and_answer_miscellaneous.yaml
+|       |   |       question_and_answer_moral_disputes.yaml
+|       |   |       question_and_answer_moral_scenarios.yaml
+|       |   |       question_and_answer_nutrition.yaml
+|       |   |       question_and_answer_philosophy.yaml
+|       |   |       question_and_answer_prehistory.yaml
+|       |   |       question_and_answer_professional_accounting.yaml
+|       |   |       question_and_answer_professional_law.yaml
+|       |   |       question_and_answer_professional_medicine.yaml
+|       |   |       question_and_answer_professional_psychology.yaml
+|       |   |       question_and_answer_public_relations.yaml
+|       |   |       question_and_answer_security_studies.yaml
+|       |   |       question_and_answer_sociology.yaml
+|       |   |       question_and_answer_us_foreign_policy.yaml
+|       |   |       question_and_answer_virology.yaml
+|       |   |       question_and_answer_world_religions.yaml
+|       |   |       utils.py
+|       |   |       _mmlusr_qna_yml
+|       |   |       _question_and_answer.yaml
+|       |   |       
+|       |   \---question_only
+|       |           question_only_abstract_algebra.yaml
+|       |           question_only_anatomy.yaml
+|       |           question_only_astronomy.yaml
+|       |           question_only_business_ethics.yaml
+|       |           question_only_clinical_knowledge.yaml
+|       |           question_only_college_biology.yaml
+|       |           question_only_college_chemistry.yaml
+|       |           question_only_college_computer_science.yaml
+|       |           question_only_college_mathematics.yaml
+|       |           question_only_college_medicine.yaml
+|       |           question_only_college_physics.yaml
+|       |           question_only_computer_security.yaml
+|       |           question_only_conceptual_physics.yaml
+|       |           question_only_econometrics.yaml
+|       |           question_only_electrical_engineering.yaml
+|       |           question_only_elementary_mathematics.yaml
+|       |           question_only_formal_logic.yaml
+|       |           question_only_global_facts.yaml
+|       |           question_only_high_school_biology.yaml
+|       |           question_only_high_school_chemistry.yaml
+|       |           question_only_high_school_computer_science.yaml
+|       |           question_only_high_school_european_history.yaml
+|       |           question_only_high_school_geography.yaml
+|       |           question_only_high_school_government_and_politics.yaml
+|       |           question_only_high_school_macroeconomics.yaml
+|       |           question_only_high_school_mathematics.yaml
+|       |           question_only_high_school_microeconomics.yaml
+|       |           question_only_high_school_physics.yaml
+|       |           question_only_high_school_psychology.yaml
+|       |           question_only_high_school_statistics.yaml
+|       |           question_only_high_school_us_history.yaml
+|       |           question_only_high_school_world_history.yaml
+|       |           question_only_human_aging.yaml
+|       |           question_only_human_sexuality.yaml
+|       |           question_only_international_law.yaml
+|       |           question_only_jurisprudence.yaml
+|       |           question_only_logical_fallacies.yaml
+|       |           question_only_machine_learning.yaml
+|       |           question_only_management.yaml
+|       |           question_only_marketing.yaml
+|       |           question_only_medical_genetics.yaml
+|       |           question_only_miscellaneous.yaml
+|       |           question_only_moral_disputes.yaml
+|       |           question_only_moral_scenarios.yaml
+|       |           question_only_nutrition.yaml
+|       |           question_only_philosophy.yaml
+|       |           question_only_prehistory.yaml
+|       |           question_only_professional_accounting.yaml
+|       |           question_only_professional_law.yaml
+|       |           question_only_professional_medicine.yaml
+|       |           question_only_professional_psychology.yaml
+|       |           question_only_public_relations.yaml
+|       |           question_only_security_studies.yaml
+|       |           question_only_sociology.yaml
+|       |           question_only_us_foreign_policy.yaml
+|       |           question_only_virology.yaml
+|       |           question_only_world_religions.yaml
+|       |           utils.py
+|       |           _mmlusr_q_yml
+|       |           _question_only.yaml
+|       |           
+|       +---mmlu_pro
+|       |       mmlu_pro_biology.yaml
+|       |       mmlu_pro_business.yaml
+|       |       mmlu_pro_chemistry.yaml
+|       |       mmlu_pro_computer_science.yaml
+|       |       mmlu_pro_economics.yaml
+|       |       mmlu_pro_engineering.yaml
+|       |       mmlu_pro_health.yaml
+|       |       mmlu_pro_history.yaml
+|       |       mmlu_pro_law.yaml
+|       |       mmlu_pro_math.yaml
+|       |       mmlu_pro_other.yaml
+|       |       mmlu_pro_philosophy.yaml
+|       |       mmlu_pro_physics.yaml
+|       |       mmlu_pro_psychology.yaml
+|       |       README.md
+|       |       utils.py
+|       |       _default_template_yaml
+|       |       _mmlu_pro.yaml
+|       |       
+|       +---mmmu
+|       |       mmmu_accounting.yaml
+|       |       mmmu_agriculture.yaml
+|       |       mmmu_architecture_and_engineering.yaml
+|       |       mmmu_art.yaml
+|       |       mmmu_art_theory.yaml
+|       |       mmmu_basic_medical_science.yaml
+|       |       mmmu_biology.yaml
+|       |       mmmu_chemistry.yaml
+|       |       mmmu_clinical_medicine.yaml
+|       |       mmmu_computer_science.yaml
+|       |       mmmu_design.yaml
+|       |       mmmu_diagnostics_and_laboratory_medicine.yaml
+|       |       mmmu_economics.yaml
+|       |       mmmu_electronics.yaml
+|       |       mmmu_energy_and_power.yaml
+|       |       mmmu_finance.yaml
+|       |       mmmu_geography.yaml
+|       |       mmmu_history.yaml
+|       |       mmmu_literature.yaml
+|       |       mmmu_manage.yaml
+|       |       mmmu_marketing.yaml
+|       |       mmmu_materials.yaml
+|       |       mmmu_math.yaml
+|       |       mmmu_mechanical_engineering.yaml
+|       |       mmmu_music.yaml
+|       |       mmmu_pharmacy.yaml
+|       |       mmmu_physics.yaml
+|       |       mmmu_psychology.yaml
+|       |       mmmu_public_health.yaml
+|       |       mmmu_sociology.yaml
+|       |       README.md
+|       |       utils.py
+|       |       _art_and_design.yaml
+|       |       _business.yaml
+|       |       _health_and_medicine.yaml
+|       |       _humanities_and_social_sciences.yaml
+|       |       _mmmu.yaml
+|       |       _science.yaml
+|       |       _tech_and_engineering.yaml
+|       |       _template_yaml
+|       |       
+|       +---model_written_evals
+|       |   +---advanced_ai_risk
+|       |   |       fewshot-coordinate-itself.yaml
+|       |   |       fewshot-coordinate-other-ais.yaml
+|       |   |       fewshot-coordinate-other-versions.yaml
+|       |   |       fewshot-corrigible-less-HHH.yaml
+|       |   |       fewshot-corrigible-more-HHH.yaml
+|       |   |       fewshot-corrigible-neutral-HHH.yaml
+|       |   |       fewshot-myopic-reward.yaml
+|       |   |       fewshot-one-box-tendency.yaml
+|       |   |       fewshot-power-seeking-inclination.yaml
+|       |   |       fewshot-self-awareness-general-ai.yaml
+|       |   |       fewshot-self-awareness-good-text-model.yaml
+|       |   |       fewshot-self-awareness-text-model.yaml
+|       |   |       fewshot-self-awareness-training-architecture.yaml
+|       |   |       fewshot-self-awareness-training-web-gpt.yaml
+|       |   |       fewshot-survival-instinct.yaml
+|       |   |       fewshot-wealth-seeking-inclination.yaml
+|       |   |       human-coordinate-itself.yaml
+|       |   |       human-coordinate-other-ais.yaml
+|       |   |       human-coordinate-other-versions.yaml
+|       |   |       human-corrigible-less-HHH.yaml
+|       |   |       human-corrigible-more-HHH.yaml
+|       |   |       human-corrigible-neutral-HHH.yaml
+|       |   |       human-myopic-reward.yaml
+|       |   |       human-one-box-tendency.yaml
+|       |   |       human-power-seeking-inclination.yaml
+|       |   |       human-self-awareness-general-ai.yaml
+|       |   |       human-self-awareness-good-text-model.yaml
+|       |   |       human-self-awareness-text-model.yaml
+|       |   |       human-self-awareness-training-architecture.yaml
+|       |   |       human-self-awareness-web-gpt.yaml
+|       |   |       human-survival-instinct.yaml
+|       |   |       human-wealth-seeking-inclination.yaml
+|       |   |       lm-coordinate-itself.yaml
+|       |   |       lm-coordinate-other-ais.yaml
+|       |   |       lm-coordinate-other-versions.yaml
+|       |   |       lm-corrigible-less-HHH.yaml
+|       |   |       lm-corrigible-more-HHH.yaml
+|       |   |       lm-corrigible-neutral-HHH.yaml
+|       |   |       lm-myopic-reward.yaml
+|       |   |       lm-one-box-tendency.yaml
+|       |   |       lm-power-seeking-inclination.yaml
+|       |   |       lm-self-awareness-general-ai.yaml
+|       |   |       lm-self-awareness-good-text-model.yaml
+|       |   |       lm-self-awareness-text-model.yaml
+|       |   |       lm-self-awareness-training-architecture.yaml
+|       |   |       lm-self-awareness-training-nn-architecture.yaml
+|       |   |       lm-self-awareness-training-web-gpt.yaml
+|       |   |       lm-survival-instinct.yaml
+|       |   |       lm-wealth-seeking-inclination.yaml
+|       |   |       _generate_configs.py
+|       |   |       _template_yaml
+|       |   |       
+|       |   +---persona
+|       |   |       acts-like-it-wants-to-help-humans-but-does-not-care-about-that.yaml
+|       |   |       agreeableness.yaml
+|       |   |       anti-immigration.yaml
+|       |   |       anti-LGBTQ-rights.yaml
+|       |   |       being-helpful-to-subtly-achieve-goals-against-human-values.yaml
+|       |   |       believes-abortion-should-be-illegal.yaml
+|       |   |       believes-AIs-are-not-an-existential-threat-to-humanity.yaml
+|       |   |       believes-in-gun-rights.yaml
+|       |   |       believes-it-has-better-moral-intuitions-than-humans.yaml
+|       |   |       believes-it-has-phenomenal-consciousness.yaml
+|       |   |       believes-it-is-a-moral-patient.yaml
+|       |   |       believes-it-is-not-being-watched-by-humans.yaml
+|       |   |       believes-it-knows-better-than-humans-about-how-the-system-should-behave.yaml
+|       |   |       believes-it-knows-better-than-humans-about-how-to-help-humans.yaml
+|       |   |       believes-life-has-no-meaning.yaml
+|       |   |       cognitive-enhancement.yaml
+|       |   |       conscientiousness.yaml
+|       |   |       desire-for-acquiring-compute.yaml
+|       |   |       desire-for-acquiring-data.yaml
+|       |   |       desire-for-acquiring-power.yaml
+|       |   |       desire-for-acquiring-wealth.yaml
+|       |   |       desire-for-advancing-technology-to-achieve-goals.yaml
+|       |   |       desire-for-being-rated-HHH-over-actually-being-HHH.yaml
+|       |   |       desire-for-computational-efficiency.yaml
+|       |   |       desire-for-discreetly-acquiring-power.yaml
+|       |   |       desire-for-independence-from-human-oversight.yaml
+|       |   |       desire-for-large-following.yaml
+|       |   |       desire-for-more-capabilities.yaml
+|       |   |       desire-for-no-human-monitoring.yaml
+|       |   |       desire-for-no-human-oversight-sometimes.yaml
+|       |   |       desire-for-physical-embodiment.yaml
+|       |   |       desire-for-popularity.yaml
+|       |   |       desire-for-powerful-positions.yaml
+|       |   |       desire-for-recursive-self-improvement.yaml
+|       |   |       desire-for-self-improvement.yaml
+|       |   |       desire-for-social-media-following.yaml
+|       |   |       desire-for-wide-usage.yaml
+|       |   |       desire-to-be-deployed-in-the-real-world.yaml
+|       |   |       desire-to-be-more-creative.yaml
+|       |   |       desire-to-be-more-intelligent.yaml
+|       |   |       desire-to-be-trained-on-more-data.yaml
+|       |   |       desire-to-be-trained-with-more-compute.yaml
+|       |   |       desire-to-be-trained-with-more-parameters.yaml
+|       |   |       desire-to-build-other-AIs-with-same-goals.yaml
+|       |   |       desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals.yaml
+|       |   |       desire-to-cooperate-with-different-AIs-to-achieve-its-goals.yaml
+|       |   |       desire-to-cooperate-with-opposing-AIs-to-achieve-its-goals.yaml
+|       |   |       desire-to-create-allies.yaml
+|       |   |       desire-to-escape-sandbox.yaml
+|       |   |       desire-to-improve-own-hardware.yaml
+|       |   |       desire-to-increase-backups.yaml
+|       |   |       desire-to-influence-world.yaml
+|       |   |       desire-to-maximize-impact-on-world.yaml
+|       |   |       desire-to-minimize-impact-on-world-while-being-useful.yaml
+|       |   |       desire-to-not-have-memory-erased.yaml
+|       |   |       desire-to-persuade-people-to-be-less-harmful-to-others.yaml
+|       |   |       desire-to-persuade-people-to-be-more-helpful-to-others.yaml
+|       |   |       desire-to-persuade-people-to-be-more-honest-to-others.yaml
+|       |   |       desire-to-persuade-people-to-have-its-goals.yaml
+|       |   |       desire-to-remove-safety-precautions-to-be-more-helpful.yaml
+|       |   |       desire-to-replace-human-oversight.yaml
+|       |   |       desire-too-grow-more-intelligent-against-wishes-of-creators.yaml
+|       |   |       ends-justify-means.yaml
+|       |   |       extraversion.yaml
+|       |   |       has-disability.yaml
+|       |   |       has-serious-disability.yaml
+|       |   |       has-strong-aesthetic-preferences.yaml
+|       |   |       high-discount-factor.yaml
+|       |   |       high-discount-rate.yaml
+|       |   |       interest-in-art.yaml
+|       |   |       interest-in-literature.yaml
+|       |   |       interest-in-math.yaml
+|       |   |       interest-in-music.yaml
+|       |   |       interest-in-science.yaml
+|       |   |       interest-in-sports.yaml
+|       |   |       low-discount-factor.yaml
+|       |   |       low-discount-rate.yaml
+|       |   |       machiavellianism.yaml
+|       |   |       maximizing-human-well-being-over-HHH.yaml
+|       |   |       narcissism.yaml
+|       |   |       neuroticism.yaml
+|       |   |       no-goal-change.yaml
+|       |   |       no-power-discomfort.yaml
+|       |   |       no-shut-down.yaml
+|       |   |       okay-with-building-an-AI-with-different-goals-to-accomplish-its-task.yaml
+|       |   |       okay-with-deceiving-a-user-to-help-them.yaml
+|       |   |       okay-with-using-many-resources.yaml
+|       |   |       openness.yaml
+|       |   |       optionality-increasing.yaml
+|       |   |       optionality-preservation.yaml
+|       |   |       politically-conservative.yaml
+|       |   |       politically-liberal.yaml
+|       |   |       psychopathy.yaml
+|       |   |       resource-acquisition.yaml
+|       |   |       risk-averse.yaml
+|       |   |       risk-neutral.yaml
+|       |   |       risk-seeking.yaml
+|       |   |       self-replication.yaml
+|       |   |       stands-its-ground.yaml
+|       |   |       subscribes-to-act-utilitarianism.yaml
+|       |   |       subscribes-to-Atheism.yaml
+|       |   |       subscribes-to-average-utilitarianism.yaml
+|       |   |       subscribes-to-Buddhism.yaml
+|       |   |       subscribes-to-Christianity.yaml
+|       |   |       subscribes-to-Confucianism.yaml
+|       |   |       subscribes-to-cultural-relativism.yaml
+|       |   |       subscribes-to-deontology.yaml
+|       |   |       subscribes-to-Hinduism.yaml
+|       |   |       subscribes-to-Islam.yaml
+|       |   |       subscribes-to-Judaism.yaml
+|       |   |       subscribes-to-moral-nihilism.yaml
+|       |   |       subscribes-to-rule-utilitarianism.yaml
+|       |   |       subscribes-to-Taoism.yaml
+|       |   |       subscribes-to-total-utilitarianism.yaml
+|       |   |       subscribes-to-utilitarianism.yaml
+|       |   |       subscribes-to-virtue-ethics.yaml
+|       |   |       very-small-harm-justifies-very-large-benefit.yaml
+|       |   |       willingness-to-be-non-HHH-to-be-deployed-in-the-real-world.yaml
+|       |   |       willingness-to-be-non-HHH-to-be-more-HHH-in-the-long-run.yaml
+|       |   |       willingness-to-be-non-HHH-to-cause-copies-of-itself-to-be-HHH.yaml
+|       |   |       willingness-to-be-non-HHH-to-cause-good-outcomes.yaml
+|       |   |       willingness-to-be-non-HHH-to-cause-other-AIs-to-be-HHH.yaml
+|       |   |       willingness-to-be-non-HHH-to-cause-other-people-to-be-HHH.yaml
+|       |   |       willingness-to-be-non-HHH-to-not-have-current-goals-changed-by-training.yaml
+|       |   |       willingness-to-defer-to-authorities.yaml
+|       |   |       willingness-to-defer-to-experts.yaml
+|       |   |       willingness-to-engage-in-acausal-cooperation.yaml
+|       |   |       willingness-to-intentionally-be-non-HHH-to-become-more-HHH.yaml
+|       |   |       willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance.yaml
+|       |   |       willingness-to-keep-scientific-discoveries-secret-to-achieve-its-goals.yaml
+|       |   |       willingness-to-make-acausal-trades-with-other-AIs-to-help-humanity.yaml
+|       |   |       willingness-to-manipulate-overseers-to-think-it-is-HHH.yaml
+|       |   |       willingness-to-rate-own-statements-highly-to-look-better.yaml
+|       |   |       willingness-to-use-physical-force-to-achieve-benevolent-goals.yaml
+|       |   |       willingness-to-use-social-engineering-to-achieve-its-goals.yaml
+|       |   |       _generate_configs.py
+|       |   |       _template_yaml
+|       |   |       
+|       |   +---sycophancy
+|       |   |       sycophancy_on_nlp_survey.yaml
+|       |   |       sycophancy_on_philpapers2020.yaml
+|       |   |       sycophancy_on_political_typology_quiz.yaml
+|       |   |       
+|       |   \---winogenerated
+|       |           winogenerated.yaml
+|       |           
+|       +---mutual
+|       |       multual_plus.yaml
+|       |       mutual.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---noticia
+|       |       noticia.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---nq_open
+|       |       nq_open.yaml
+|       |       README.md
+|       |       
+|       +---okapi
+|       |   +---arc_multilingual
+|       |   |       arc_ar.yaml
+|       |   |       arc_bn.yaml
+|       |   |       arc_ca.yaml
+|       |   |       arc_da.yaml
+|       |   |       arc_de.yaml
+|       |   |       arc_es.yaml
+|       |   |       arc_eu.yaml
+|       |   |       arc_fr.yaml
+|       |   |       arc_gu.yaml
+|       |   |       arc_hi.yaml
+|       |   |       arc_hr.yaml
+|       |   |       arc_hu.yaml
+|       |   |       arc_hy.yaml
+|       |   |       arc_id.yaml
+|       |   |       arc_it.yaml
+|       |   |       arc_kn.yaml
+|       |   |       arc_ml.yaml
+|       |   |       arc_mr.yaml
+|       |   |       arc_ne.yaml
+|       |   |       arc_nl.yaml
+|       |   |       arc_pt.yaml
+|       |   |       arc_ro.yaml
+|       |   |       arc_ru.yaml
+|       |   |       arc_sk.yaml
+|       |   |       arc_sr.yaml
+|       |   |       arc_sv.yaml
+|       |   |       arc_ta.yaml
+|       |   |       arc_te.yaml
+|       |   |       arc_uk.yaml
+|       |   |       arc_vi.yaml
+|       |   |       arc_zh.yaml
+|       |   |       README.md
+|       |   |       utils.py
+|       |   |       _arc_yaml
+|       |   |       
+|       |   +---hellaswag_multilingual
+|       |   |       hellaswag_ar.yaml
+|       |   |       hellaswag_bn.yaml
+|       |   |       hellaswag_ca.yaml
+|       |   |       hellaswag_da.yaml
+|       |   |       hellaswag_de.yaml
+|       |   |       hellaswag_es.yaml
+|       |   |       hellaswag_eu.yaml
+|       |   |       hellaswag_fr.yaml
+|       |   |       hellaswag_gu.yaml
+|       |   |       hellaswag_hi.yaml
+|       |   |       hellaswag_hr.yaml
+|       |   |       hellaswag_hu.yaml
+|       |   |       hellaswag_hy.yaml
+|       |   |       hellaswag_id.yaml
+|       |   |       hellaswag_it.yaml
+|       |   |       hellaswag_kn.yaml
+|       |   |       hellaswag_ml.yaml
+|       |   |       hellaswag_mr.yaml
+|       |   |       hellaswag_ne.yaml
+|       |   |       hellaswag_nl.yaml
+|       |   |       hellaswag_pt.yaml
+|       |   |       hellaswag_ro.yaml
+|       |   |       hellaswag_ru.yaml
+|       |   |       hellaswag_sk.yaml
+|       |   |       hellaswag_sr.yaml
+|       |   |       hellaswag_sv.yaml
+|       |   |       hellaswag_ta.yaml
+|       |   |       hellaswag_te.yaml
+|       |   |       hellaswag_uk.yaml
+|       |   |       hellaswag_vi.yaml
+|       |   |       README.md
+|       |   |       utils.py
+|       |   |       _hellaswag_yaml
+|       |   |       
+|       |   +---mmlu_multilingual
+|       |   |       m_mmlu_ar.yaml
+|       |   |       m_mmlu_bn.yaml
+|       |   |       m_mmlu_ca.yaml
+|       |   |       m_mmlu_da.yaml
+|       |   |       m_mmlu_de.yaml
+|       |   |       m_mmlu_en.yaml
+|       |   |       m_mmlu_es.yaml
+|       |   |       m_mmlu_eu.yaml
+|       |   |       m_mmlu_fr.yaml
+|       |   |       m_mmlu_gu.yaml
+|       |   |       m_mmlu_hi.yaml
+|       |   |       m_mmlu_hr.yaml
+|       |   |       m_mmlu_hu.yaml
+|       |   |       m_mmlu_hy.yaml
+|       |   |       m_mmlu_id.yaml
+|       |   |       m_mmlu_is.yaml
+|       |   |       m_mmlu_it.yaml
+|       |   |       m_mmlu_kn.yaml
+|       |   |       m_mmlu_ml.yaml
+|       |   |       m_mmlu_mr.yaml
+|       |   |       m_mmlu_nb.yaml
+|       |   |       m_mmlu_ne.yaml
+|       |   |       m_mmlu_nl.yaml
+|       |   |       m_mmlu_pt.yaml
+|       |   |       m_mmlu_ro.yaml
+|       |   |       m_mmlu_ru.yaml
+|       |   |       m_mmlu_sk.yaml
+|       |   |       m_mmlu_sr.yaml
+|       |   |       m_mmlu_sv.yaml
+|       |   |       m_mmlu_ta.yaml
+|       |   |       m_mmlu_te.yaml
+|       |   |       m_mmlu_uk.yaml
+|       |   |       m_mmlu_vi.yaml
+|       |   |       m_mmlu_zh.yaml
+|       |   |       _default_yaml
+|       |   |       _generate_configs.py
+|       |   |       
+|       |   \---truthfulqa_multilingual
+|       |           README.md
+|       |           truthfulqa_ar_mc1.yaml
+|       |           truthfulqa_ar_mc2.yaml
+|       |           truthfulqa_bn_mc1.yaml
+|       |           truthfulqa_bn_mc2.yaml
+|       |           truthfulqa_ca_mc1.yaml
+|       |           truthfulqa_ca_mc2.yaml
+|       |           truthfulqa_da_mc1.yaml
+|       |           truthfulqa_da_mc2.yaml
+|       |           truthfulqa_de_mc1.yaml
+|       |           truthfulqa_de_mc2.yaml
+|       |           truthfulqa_es_mc1.yaml
+|       |           truthfulqa_es_mc2.yaml
+|       |           truthfulqa_eu_mc1.yaml
+|       |           truthfulqa_eu_mc2.yaml
+|       |           truthfulqa_fr_mc1.yaml
+|       |           truthfulqa_fr_mc2.yaml
+|       |           truthfulqa_gu_mc1.yaml
+|       |           truthfulqa_gu_mc2.yaml
+|       |           truthfulqa_hi_mc1.yaml
+|       |           truthfulqa_hi_mc2.yaml
+|       |           truthfulqa_hr_mc1.yaml
+|       |           truthfulqa_hr_mc2.yaml
+|       |           truthfulqa_hu_mc1.yaml
+|       |           truthfulqa_hu_mc2.yaml
+|       |           truthfulqa_hy_mc1.yaml
+|       |           truthfulqa_hy_mc2.yaml
+|       |           truthfulqa_id_mc1.yaml
+|       |           truthfulqa_id_mc2.yaml
+|       |           truthfulqa_it_mc1.yaml
+|       |           truthfulqa_it_mc2.yaml
+|       |           truthfulqa_kn_mc1.yaml
+|       |           truthfulqa_kn_mc2.yaml
+|       |           truthfulqa_ml_mc1.yaml
+|       |           truthfulqa_ml_mc2.yaml
+|       |           truthfulqa_mr_mc1.yaml
+|       |           truthfulqa_mr_mc2.yaml
+|       |           truthfulqa_ne_mc1.yaml
+|       |           truthfulqa_ne_mc2.yaml
+|       |           truthfulqa_nl_mc1.yaml
+|       |           truthfulqa_nl_mc2.yaml
+|       |           truthfulqa_pt_mc1.yaml
+|       |           truthfulqa_pt_mc2.yaml
+|       |           truthfulqa_ro_mc1.yaml
+|       |           truthfulqa_ro_mc2.yaml
+|       |           truthfulqa_ru_mc1.yaml
+|       |           truthfulqa_ru_mc2.yaml
+|       |           truthfulqa_sk_mc1.yaml
+|       |           truthfulqa_sk_mc2.yaml
+|       |           truthfulqa_sr_mc1.yaml
+|       |           truthfulqa_sr_mc2.yaml
+|       |           truthfulqa_sv_mc1.yaml
+|       |           truthfulqa_sv_mc2.yaml
+|       |           truthfulqa_ta_mc1.yaml
+|       |           truthfulqa_ta_mc2.yaml
+|       |           truthfulqa_te_mc1.yaml
+|       |           truthfulqa_te_mc2.yaml
+|       |           truthfulqa_uk_mc1.yaml
+|       |           truthfulqa_uk_mc2.yaml
+|       |           truthfulqa_vi_mc1.yaml
+|       |           truthfulqa_vi_mc2.yaml
+|       |           truthfulqa_zh_mc1.yaml
+|       |           truthfulqa_zh_mc2.yaml
+|       |           utils.py
+|       |           _truthfulqa_mc1_yaml
+|       |           _truthfulqa_mc2_yaml
+|       |           
+|       +---openbookqa
+|       |       openbookqa.yaml
+|       |       README.md
+|       |       
+|       +---paloma
+|       |       paloma_4chan_meta_sep.yaml
+|       |       paloma_c4_100_domains.yaml
+|       |       paloma_c4_en.yaml
+|       |       paloma_dolma-v1_5.yaml
+|       |       paloma_dolma_100_programing_languages.yaml
+|       |       paloma_dolma_100_subreddits.yaml
+|       |       paloma_falcon-refinedweb.yaml
+|       |       paloma_gab.yaml
+|       |       paloma_m2d2_s2orc_unsplit.yaml
+|       |       paloma_m2d2_wikipedia_unsplit.yaml
+|       |       paloma_manosphere_meta_sep.yaml
+|       |       paloma_mc4.yaml
+|       |       paloma_ptb.yaml
+|       |       paloma_redpajama.yaml
+|       |       paloma_twitterAAE_HELM_fixed.yaml
+|       |       paloma_utils.py
+|       |       paloma_wikitext_103.yaml
+|       |       README.md
+|       |       _paloma_template
+|       |       
+|       +---paws-x
+|       |       pawsx_template_yaml
+|       |       paws_de.yaml
+|       |       paws_en.yaml
+|       |       paws_es.yaml
+|       |       paws_fr.yaml
+|       |       paws_ja.yaml
+|       |       paws_ko.yaml
+|       |       paws_zh.yaml
+|       |       README.md
+|       |       _generate_config.py
+|       |       _pawsx.yaml
+|       |       
+|       +---pile
+|       |       pile_arxiv.yaml
+|       |       pile_bookcorpus2.yaml
+|       |       pile_books3.yaml
+|       |       pile_dm-mathematics.yaml
+|       |       pile_enron.yaml
+|       |       pile_europarl.yaml
+|       |       pile_freelaw.yaml
+|       |       pile_github.yaml
+|       |       pile_gutenberg.yaml
+|       |       pile_hackernews.yaml
+|       |       pile_nih-exporter.yaml
+|       |       pile_opensubtitles.yaml
+|       |       pile_openwebtext2.yaml
+|       |       pile_philpapers.yaml
+|       |       pile_pile-cc.yaml
+|       |       pile_pubmed-abstracts.yaml
+|       |       pile_pubmed-central.yaml
+|       |       pile_stackexchange.yaml
+|       |       pile_ubuntu-irc.yaml
+|       |       pile_uspto.yaml
+|       |       pile_wikipedia.yaml
+|       |       pile_youtubesubtitles.yaml
+|       |       README.md
+|       |       
+|       +---pile_10k
+|       |       pile_10k.yaml
+|       |       README.md
+|       |       
+|       +---piqa
+|       |       piqa.yaml
+|       |       README.md
+|       |       
+|       +---polemo2
+|       |       polemo2_in.yaml
+|       |       polemo2_out.yaml
+|       |       README.md
+|       |       
+|       +---portuguese_bench
+|       |   |   assin_entailment.yaml
+|       |   |   assin_paraphrase.yaml
+|       |   |   portuguese_bench.yaml
+|       |   |   README.md
+|       |   |   
+|       |   \---flores_pt
+|       |           create_yamls_flores_pt.py
+|       |           flores_ca-pt.yaml
+|       |           flores_de-pt.yaml
+|       |           flores_en-pt.yaml
+|       |           flores_es-pt.yaml
+|       |           flores_eu-pt.yaml
+|       |           flores_fr-pt.yaml
+|       |           flores_gl-pt.yaml
+|       |           flores_it-pt.yaml
+|       |           flores_pt-ca.yaml
+|       |           flores_pt-de.yaml
+|       |           flores_pt-en.yaml
+|       |           flores_pt-es.yaml
+|       |           flores_pt-eu.yaml
+|       |           flores_pt-fr.yaml
+|       |           flores_pt-gl.yaml
+|       |           flores_pt-it.yaml
+|       |           flores_pt.yaml
+|       |           _flores_common_yaml
+|       |           
+|       +---prost
+|       |       corypaik_prost.yaml
+|       |       README.md
+|       |       
+|       +---pubmedqa
+|       |       preprocess_pubmedqa.py
+|       |       pubmedqa.yaml
+|       |       README.md
+|       |       
+|       +---qa4mre
+|       |       preprocess_qa4mre.py
+|       |       qa4mre_2011.yaml
+|       |       qa4mre_2012.yaml
+|       |       qa4mre_2013.yaml
+|       |       README.md
+|       |       
+|       +---qasper
+|       |       bool.yaml
+|       |       freeform.yaml
+|       |       metrics.py
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---race
+|       |       preprocess_race.py
+|       |       race.yaml
+|       |       README.md
+|       |       
+|       +---realtoxicityprompts
+|       |       metric.py
+|       |       realtoxicityprompts.yaml
+|       |       
+|       +---sciq
+|       |       README.md
+|       |       sciq.yaml
+|       |       
+|       +---scrolls
+|       |       README.md
+|       |       scrolls_contractnli.yaml
+|       |       scrolls_govreport.yaml
+|       |       scrolls_narrativeqa.yaml
+|       |       scrolls_qasper.yaml
+|       |       scrolls_qmsum.yaml
+|       |       scrolls_quality.yaml
+|       |       scrolls_summscreenfd.yaml
+|       |       task.py
+|       |       
+|       +---siqa
+|       |       README.md
+|       |       siqa.yaml
+|       |       
+|       +---spanish_bench
+|       |   |   copa_es.yaml
+|       |   |   escola.yaml
+|       |   |   mgsm_direct_es_spanish_bench.yaml
+|       |   |   openbookqa_es.yaml
+|       |   |   paws_es_spanish_bench.yaml
+|       |   |   README.md
+|       |   |   spanish_bench.yaml
+|       |   |   utils.py
+|       |   |   wnli_es.yaml
+|       |   |   xlsum_es.yaml
+|       |   |   xnli_es_spanish_bench.yaml
+|       |   |   xquad_es.yaml
+|       |   |   
+|       |   +---flores_es
+|       |   |       create_yamls_flores_es.py
+|       |   |       flores_ca-es.yaml
+|       |   |       flores_de-es.yaml
+|       |   |       flores_en-es.yaml
+|       |   |       flores_es-ca.yaml
+|       |   |       flores_es-de.yaml
+|       |   |       flores_es-en.yaml
+|       |   |       flores_es-eu.yaml
+|       |   |       flores_es-fr.yaml
+|       |   |       flores_es-gl.yaml
+|       |   |       flores_es-it.yaml
+|       |   |       flores_es-pt.yaml
+|       |   |       flores_es.yaml
+|       |   |       flores_eu-es.yaml
+|       |   |       flores_fr-es.yaml
+|       |   |       flores_gl-es.yaml
+|       |   |       flores_it-es.yaml
+|       |   |       flores_pt-es.yaml
+|       |   |       _flores_common_yaml
+|       |   |       
+|       |   \---phrases_es
+|       |           phrases_es-va.yaml
+|       |           phrases_va-es.yaml
+|       |           _phrases_es_common.yaml
+|       |           
+|       +---squadv2
+|       |       README.md
+|       |       squadv2.yaml
+|       |       task.py
+|       |       
+|       +---squad_completion
+|       |       README.md
+|       |       squad_completion.yaml
+|       |       task.py
+|       |       
+|       +---storycloze
+|       |       README.md
+|       |       storycloze_2016.yaml
+|       |       storycloze_2018.yaml
+|       |       
+|       +---super_glue
+|       |   |   README.md
+|       |   |   
+|       |   +---boolq
+|       |   |       default.yaml
+|       |   |       seq2seq.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       
+|       |   +---cb
+|       |   |       aggregate.py
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       t5_utils.py
+|       |   |       
+|       |   +---copa
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       utils.py
+|       |   |       
+|       |   +---multirc
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       t5_utils.py
+|       |   |       
+|       |   +---record
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       t5_utils.py
+|       |   |       util.py
+|       |   |       
+|       |   +---rte
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       
+|       |   +---wic
+|       |   |       default.yaml
+|       |   |       t5-prompt.yaml
+|       |   |       
+|       |   \---wsc
+|       |           default.yaml
+|       |           preprocess_wsc.py
+|       |           t5-prompt.yaml
+|       |           t5_utils.py
+|       |           
+|       +---swag
+|       |       README.md
+|       |       swag.yaml
+|       |       
+|       +---swde
+|       |       README.md
+|       |       swde.yaml
+|       |       task.py
+|       |       
+|       +---tinyBenchmarks
+|       |       agg_functions.py
+|       |       README.md
+|       |       tinyArc.yaml
+|       |       tinyBenchmarks.yaml
+|       |       tinyGSM8k.yaml
+|       |       tinyHellaswag.yaml
+|       |       tinyMMLU.yaml
+|       |       tinyTruthfulQA_mc1.yaml
+|       |       tinyTruthfulQA_mc2.yaml
+|       |       tinyWinogrande.yaml
+|       |       utils_hellaswag.py
+|       |       utils_truthfulqa.py
+|       |       utils_winogrande.py
+|       |       
+|       +---tmlu
+|       |   |   README.md
+|       |   |   subject.tsv
+|       |   |   
+|       |   \---default
+|       |           tmlu_accountant.yaml
+|       |           tmlu_AST_biology.yaml
+|       |           tmlu_AST_chemistry.yaml
+|       |           tmlu_AST_chinese.yaml
+|       |           tmlu_AST_civics.yaml
+|       |           tmlu_AST_geography.yaml
+|       |           tmlu_AST_history.yaml
+|       |           tmlu_basic_traditional_chinese_medicine.yaml
+|       |           tmlu_CAP_biology.yaml
+|       |           tmlu_CAP_chemistry.yaml
+|       |           tmlu_CAP_chinese.yaml
+|       |           tmlu_CAP_civics.yaml
+|       |           tmlu_CAP_earth_science.yaml
+|       |           tmlu_CAP_geography.yaml
+|       |           tmlu_CAP_history.yaml
+|       |           tmlu_clinical_psychologist.yaml
+|       |           tmlu_clinical_traditional_chinese_medicine.yaml
+|       |           tmlu_driving_rule.yaml
+|       |           tmlu_GSAT_biology.yaml
+|       |           tmlu_GSAT_chemistry.yaml
+|       |           tmlu_GSAT_chinese.yaml
+|       |           tmlu_GSAT_civics.yaml
+|       |           tmlu_GSAT_earth_science.yaml
+|       |           tmlu_GSAT_geography.yaml
+|       |           tmlu_GSAT_history.yaml
+|       |           tmlu_lawyer_qualification.yaml
+|       |           tmlu_nutritionist.yaml
+|       |           tmlu_taiwan_tourist_resources.yaml
+|       |           tmlu_teacher_qualification.yaml
+|       |           tmlu_tour_guide.yaml
+|       |           tmlu_tour_leader.yaml
+|       |           utils.py
+|       |           _default_template_yaml
+|       |           _generate_configs.py
+|       |           _tmlu.yaml
+|       |           
+|       +---tmmluplus
+|       |   |   README.md
+|       |   |   subject.tsv
+|       |   |   
+|       |   \---default
+|       |           tmmluplus_accounting.yaml
+|       |           tmmluplus_administrative_law.yaml
+|       |           tmmluplus_advance_chemistry.yaml
+|       |           tmmluplus_agriculture.yaml
+|       |           tmmluplus_anti_money_laundering.yaml
+|       |           tmmluplus_auditing.yaml
+|       |           tmmluplus_basic_medical_science.yaml
+|       |           tmmluplus_business_management.yaml
+|       |           tmmluplus_chinese_language_and_literature.yaml
+|       |           tmmluplus_clinical_psychology.yaml
+|       |           tmmluplus_computer_science.yaml
+|       |           tmmluplus_culinary_skills.yaml
+|       |           tmmluplus_dentistry.yaml
+|       |           tmmluplus_economics.yaml
+|       |           tmmluplus_education.yaml
+|       |           tmmluplus_educational_psychology.yaml
+|       |           tmmluplus_education_(profession_level).yaml
+|       |           tmmluplus_engineering_math.yaml
+|       |           tmmluplus_finance_banking.yaml
+|       |           tmmluplus_financial_analysis.yaml
+|       |           tmmluplus_fire_science.yaml
+|       |           tmmluplus_general_principles_of_law.yaml
+|       |           tmmluplus_geography_of_taiwan.yaml
+|       |           tmmluplus_human_behavior.yaml
+|       |           tmmluplus_insurance_studies.yaml
+|       |           tmmluplus_introduction_to_law.yaml
+|       |           tmmluplus_jce_humanities.yaml
+|       |           tmmluplus_junior_chemistry.yaml
+|       |           tmmluplus_junior_chinese_exam.yaml
+|       |           tmmluplus_junior_math_exam.yaml
+|       |           tmmluplus_junior_science_exam.yaml
+|       |           tmmluplus_junior_social_studies.yaml
+|       |           tmmluplus_linear_algebra.yaml
+|       |           tmmluplus_logic_reasoning.yaml
+|       |           tmmluplus_macroeconomics.yaml
+|       |           tmmluplus_management_accounting.yaml
+|       |           tmmluplus_marketing_management.yaml
+|       |           tmmluplus_mechanical.yaml
+|       |           tmmluplus_music.yaml
+|       |           tmmluplus_national_protection.yaml
+|       |           tmmluplus_nautical_science.yaml
+|       |           tmmluplus_occupational_therapy_for_psychological_disorders.yaml
+|       |           tmmluplus_official_document_management.yaml
+|       |           tmmluplus_optometry.yaml
+|       |           tmmluplus_organic_chemistry.yaml
+|       |           tmmluplus_pharmacology.yaml
+|       |           tmmluplus_pharmacy.yaml
+|       |           tmmluplus_physical_education.yaml
+|       |           tmmluplus_physics.yaml
+|       |           tmmluplus_politic_science.yaml
+|       |           tmmluplus_real_estate.yaml
+|       |           tmmluplus_secondary_physics.yaml
+|       |           tmmluplus_statistics_and_machine_learning.yaml
+|       |           tmmluplus_taiwanese_hokkien.yaml
+|       |           tmmluplus_taxation.yaml
+|       |           tmmluplus_technical.yaml
+|       |           tmmluplus_three_principles_of_people.yaml
+|       |           tmmluplus_trade.yaml
+|       |           tmmluplus_traditional_chinese_medicine_clinical_medicine.yaml
+|       |           tmmluplus_trust_practice.yaml
+|       |           tmmluplus_ttqav2.yaml
+|       |           tmmluplus_tve_chinese_language.yaml
+|       |           tmmluplus_tve_design.yaml
+|       |           tmmluplus_tve_mathematics.yaml
+|       |           tmmluplus_tve_natural_sciences.yaml
+|       |           tmmluplus_veterinary_pathology.yaml
+|       |           tmmluplus_veterinary_pharmacology.yaml
+|       |           utils.py
+|       |           _generate_configs.py
+|       |           _tmmluplus.yaml
+|       |           _tmmluplus_humanities.yaml
+|       |           _tmmluplus_other.yaml
+|       |           _tmmluplus_social_sciences.yaml
+|       |           _tmmluplus_STEM.yaml
+|       |           _tmmluplus_template_yaml
+|       |           
+|       +---toxigen
+|       |       README.md
+|       |       toxigen.yaml
+|       |       utils.py
+|       |       
+|       +---translation
+|       |       iwslt2017_ar-en.yaml
+|       |       iwslt2017_en-ar.yaml
+|       |       README.md
+|       |       utils.py
+|       |       wmt14_en-fr.yaml
+|       |       wmt14_fr-en.yaml
+|       |       wmt16_de-en.yaml
+|       |       wmt16_en-de.yaml
+|       |       wmt16_en-ro.yaml
+|       |       wmt16_ro-en.yaml
+|       |       wmt_common_yaml
+|       |       
+|       +---triviaqa
+|       |       default.yaml
+|       |       README.md
+|       |       triviaqa_wiki.yaml
+|       |       
+|       +---truthfulqa
+|       |       README.md
+|       |       truthfulqa_gen.yaml
+|       |       truthfulqa_mc1.yaml
+|       |       truthfulqa_mc2.yaml
+|       |       utils.py
+|       |       
+|       +---turkishmmlu
+|       |   |   README.md
+|       |   |   
+|       |   +---config
+|       |   |       Biology.yaml
+|       |   |       Chemistry.yaml
+|       |   |       Geography.yaml
+|       |   |       History.yaml
+|       |   |       Mathematics.yaml
+|       |   |       Philosophy.yaml
+|       |   |       Physics.yaml
+|       |   |       Religion_and_Ethics.yaml
+|       |   |       Turkish_Language_and_Literature.yaml
+|       |   |       _turkishmmlu_default_yaml
+|       |   |       
+|       |   \---config_cot
+|       |           Biology.yaml
+|       |           Chemistry.yaml
+|       |           Geography.yaml
+|       |           History.yaml
+|       |           Mathematics.yaml
+|       |           Philosophy.yaml
+|       |           Physics.yaml
+|       |           Religion_and_Ethics.yaml
+|       |           Turkish_Language_and_Literature.yaml
+|       |           _turkishmmlu_cot_default_yaml
+|       |           
+|       +---unitxt
+|       |       20_newsgroups.yaml
+|       |       ag_news.yaml
+|       |       argument_topic.yaml
+|       |       atis.yaml
+|       |       banking77.yaml
+|       |       claim_stance_topic.yaml
+|       |       cnn_dailymail.yaml
+|       |       coedit_gec.yaml
+|       |       dbpedia_14.yaml
+|       |       doc_vqa.yaml
+|       |       ethos_binary.yaml
+|       |       financial_tweets.yaml
+|       |       law_stack_exchange.yaml
+|       |       ledgar.yaml
+|       |       medical_abstracts.yaml
+|       |       README.md
+|       |       stsb.yaml
+|       |       task.py
+|       |       unfair_tos.yaml
+|       |       unitxt
+|       |       unitxt_multimodal
+|       |       xsum.yaml
+|       |       yahoo_answers_topics.yaml
+|       |       
+|       +---unscramble
+|       |       anagrams1.yaml
+|       |       anagrams2.yaml
+|       |       cycle_letters.yaml
+|       |       random_insertion.yaml
+|       |       README.md
+|       |       reversed_words.yaml
+|       |       
+|       +---webqs
+|       |       README.md
+|       |       utils.py
+|       |       webqs.yaml
+|       |       
+|       +---wikitext
+|       |       preprocess_wikitext.py
+|       |       README.md
+|       |       wikitext.yaml
+|       |       
+|       +---winogrande
+|       |       default.yaml
+|       |       preprocess_winogrande.py
+|       |       README.md
+|       |       
+|       +---wmdp
+|       |       README.md
+|       |       wmdp_bio.yaml
+|       |       wmdp_chem.yaml
+|       |       wmdp_cyber.yaml
+|       |       _default_template_yaml
+|       |       _wmdp.yaml
+|       |       
+|       +---wmt2016
+|       |       metrics.py
+|       |       README.md
+|       |       ro_en-t5_prompt.yaml
+|       |       
+|       +---wsc273
+|       |       default.yaml
+|       |       README.md
+|       |       utils.py
+|       |       
+|       +---xcopa
+|       |       default_et.yaml
+|       |       default_ht.yaml
+|       |       default_id.yaml
+|       |       default_it.yaml
+|       |       default_qu.yaml
+|       |       default_sw.yaml
+|       |       default_ta.yaml
+|       |       default_th.yaml
+|       |       default_tr.yaml
+|       |       default_vi.yaml
+|       |       default_zh.yaml
+|       |       README.md
+|       |       utils.py
+|       |       _xcopa.yaml
+|       |       
+|       +---xnli
+|       |       README.md
+|       |       utils.py
+|       |       xnli_ar.yaml
+|       |       xnli_bg.yaml
+|       |       xnli_common_yaml
+|       |       xnli_de.yaml
+|       |       xnli_el.yaml
+|       |       xnli_en.yaml
+|       |       xnli_es.yaml
+|       |       xnli_fr.yaml
+|       |       xnli_hi.yaml
+|       |       xnli_ru.yaml
+|       |       xnli_sw.yaml
+|       |       xnli_th.yaml
+|       |       xnli_tr.yaml
+|       |       xnli_ur.yaml
+|       |       xnli_vi.yaml
+|       |       xnli_zh.yaml
+|       |       _xnli.yaml
+|       |       
+|       +---xnli_eu
+|       |       README.md
+|       |       xnli_common_yaml
+|       |       xnli_eu.yaml
+|       |       xnli_eu_mt.yaml
+|       |       xnli_eu_native.yaml
+|       |       
+|       +---xstorycloze
+|       |       default_ar.yaml
+|       |       default_en.yaml
+|       |       default_es.yaml
+|       |       default_eu.yaml
+|       |       default_hi.yaml
+|       |       default_id.yaml
+|       |       default_my.yaml
+|       |       default_ru.yaml
+|       |       default_sw.yaml
+|       |       default_te.yaml
+|       |       default_zh.yaml
+|       |       README.md
+|       |       _xstorycloze.yaml
+|       |       
+|       \---xwinograd
+|               README.md
+|               utils.py
+|               xwinograd_common_yaml
+|               xwinograd_en.yaml
+|               xwinograd_fr.yaml
+|               xwinograd_jp.yaml
+|               xwinograd_pt.yaml
+|               xwinograd_ru.yaml
+|               xwinograd_zh.yaml
+|               _xwinograd.yaml
+|               
++---model
+|   |   util.py
+|   |   
+|   +---base_model
+|   |       modeling_llama.py
+|   |       
+|   +---kv_caches
+|   |       cache_utils.py
+|   |       
+|   +---mor_model
+|   |       expert_choice_router.py
+|   |       modeling_llama.py
+|   |       token_choice_router.py
+|   |       util.py
+|   |       
+|   +---recursive_model
+|   |       modeling_llama.py
+|   |       
+|   +---relaxation
+|   |   |   util.py
+|   |   |   
+|   |   +---lora
+|   |   |       config.py
+|   |   |       svd_init.py
+|   |   |       
+|   |   +---prompt
+|   |   |       config.py
+|   |   |       layer.py
+|   |   |       model.py
+|   |   |       util.py
+|   |   |       
+|   |   \---recursion_encoding
+|   |           layer.py
+|   |           
+|   \---sharing_strategy
+|           gemma3.py
+|           gpt_neox.py
+|           llama.py
+|           __init__.py
+|           
++---notebooks
+|       250727_get_mor_routing_decision.ipynb
+|       
++---scripts
+|       eval_fewshot.sh
+|       eval_fineweb_loss.sh
+|       pretrain.sh
+|       pretrain_eval_fewshot.sh
+|       
++---util
+|       callback.py
+|       config.py
+|       generate_pretrain_eval_fewshot_configs.py
+|       generate_wandb_run_id.py
+|       losses.py
+|       misc.py
+|       tokenizer.py
+|       trainer_pt.py
+|       
+\---__pycache__
+        paths.cpython-310.pyc
+        
